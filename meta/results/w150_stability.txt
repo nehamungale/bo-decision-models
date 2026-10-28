@@ -1,0 +1,9 @@
+Split-half stability: define 'fall back' from random seeds 4200-4203, score with random seeds 4204-4207 (independent), noise 0 / 5%
+noise 0%: always-W1 0.0329 | decide-by-A, realise-on-B 0.0258 (+21.7% vs always-W1) | decided fall-back on 35/150 | agreement of the label between halves 0.90
+noise 5%: always-W1 0.0505 | decide-by-A, realise-on-B 0.0426 (+15.6% vs always-W1) | decided fall-back on 57/150 | agreement of the label between halves 0.78
+tabrepo  obs_cv       AUROC 0.33 (n=120, failures 29)
+tabrepo  gp_noise     AUROC 0.53 (n=120, failures 29)
+tabrepo  spearman_src AUROC 0.52 (n=120, failures 29)
+lcbench  obs_cv       AUROC 0.21 (n=30, failures 4)
+lcbench  gp_noise     AUROC 0.72 (n=30, failures 4)
+lcbench  spearman_src AUROC 0.06 (n=30, failures 4)

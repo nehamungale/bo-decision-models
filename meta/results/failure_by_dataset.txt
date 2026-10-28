@@ -1,0 +1,25 @@
+datasets appearing in >=2 sampled landscapes: 34 | with failure in all of them: 0 | in some but not all: 15 | none: 19
+                                             sum  count
+dataset                                                
+Buzzinsocialmedia_Twitter                      4      6
+blood-transfusion-service-center               2      3
+kc1                                            2      3
+CIFAR_10                                       1      2
+GAMETES_Epistasis_3-Way_20atts_0_2H_EDM-1_1    1      3
+MagicTelescope                                 1      3
+autoUniv-au7-700                               1      2
+christine                                      1      3
+fri_c2_1000_25                                 1      2
+jasmine                                        1      2
+expected 'fail in all' under independence (base rate 0.22): 1.2
+largest excess-regret failures:
+                        landscape      w      r
+   tabrepo_XGBoost/fri_c2_1000_25 0.2780 0.0843
+       lcbench/KDDCup09_appetency 0.2181 0.0908
+               lcbench/APSFailure 0.3560 0.2315
+tabrepo_CatBoost/autoUniv-au7-700 0.2178 0.1216
+tabrepo_NeuralNetTorch/philippine 0.2688 0.1736
+           tabrepo_CatBoost/quake 0.2630 0.1897
+        tabrepo_CatBoost/us_crime 0.1018 0.0323
+                 lcbench/credit-g 0.4139 0.3515
+share of total excess regret from the top 10 failures: 0.78
