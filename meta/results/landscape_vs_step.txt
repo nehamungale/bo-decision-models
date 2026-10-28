@@ -1,0 +1,11 @@
+ranked states only (both continuations vary); best AF = argmax label under LogEI continuation, ties excluded
+tabrepo_CatBoost/kr-vs-k                   ranked unique-best states 2 (too few)
+tabrepo_RandomForest/helena                n=  6 best-AF counts {'LogEI': 0, 'LogPI': 1, 'UCB': 1, 'TS': 0, 'PosMean': 3, 'PosSTD': 1} | share equal to landscape mode 0.50 | label gain: per-state best 0.0902, landscape-mode AF 0.0469, mean AF 0.0161
+                                           campaigns with >=2 ranked states: 2, of which best AF differs within the campaign: 2
+hpob_5527/145833                           n= 11 best-AF counts {'LogEI': 1, 'LogPI': 1, 'UCB': 0, 'TS': 4, 'PosMean': 3, 'PosSTD': 2} | share equal to landscape mode 0.36 | label gain: per-state best 0.1603, landscape-mode AF 0.0361, mean AF 0.0509
+                                           campaigns with >=2 ranked states: 3, of which best AF differs within the campaign: 1
+hpob_5971/145979                           n=  5 best-AF counts {'LogEI': 0, 'LogPI': 1, 'UCB': 1, 'TS': 2, 'PosMean': 1, 'PosSTD': 0} | share equal to landscape mode 0.40 | label gain: per-state best 0.0538, landscape-mode AF 0.0400, mean AF 0.0108
+                                           campaigns with >=2 ranked states: 1, of which best AF differs within the campaign: 1
+lcbench/helena                             n=  7 best-AF counts {'LogEI': 0, 'LogPI': 0, 'UCB': 1, 'TS': 2, 'PosMean': 1, 'PosSTD': 3} | share equal to landscape mode 0.43 | label gain: per-state best 0.1996, landscape-mode AF 0.1391, mean AF 0.1164
+                                           campaigns with >=2 ranked states: 3, of which best AF differs within the campaign: 1
+lcbench/blood-transfusion-service-center   ranked unique-best states 2 (too few)

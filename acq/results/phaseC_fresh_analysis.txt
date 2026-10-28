@@ -1,0 +1,19 @@
+FRESH seeds 10-19 only; mean AUC by dataset
+dataset                      LogEI       LogPI          TS      random        rule  learned_L2 fixed_mixtu tev1_sample
+numerai28.6                  0.274       0.261       0.228       0.223       0.283       0.215       0.249       0.209
+KDDCup09_appetency           0.105       0.116       0.107       0.100       0.124       0.097       0.095       0.104
+albert                       0.087       0.194       0.067       0.165       0.123       0.167       0.136       0.106
+helena                       0.065       0.058       0.081       0.075       0.057       0.072       0.061       0.060
+vehicle                      0.027       0.041       0.026       0.022       0.031       0.022       0.021       0.031
+sylvine                      0.052       0.063       0.066       0.067       0.058       0.064       0.061       0.057
+kc1                          0.407       0.420       0.445       0.412       0.392       0.408       0.423       0.444
+christine                    0.169       0.173       0.200       0.205       0.195       0.180       0.171       0.176
+MEAN                        0.1482      0.1658      0.1524      0.1584      0.1579      0.1530      0.1522      0.1484
+
+tev1_sample vs each (negative = tev1 better): change in mean AUC | mean of ratios | better on k/8 | Wilcoxon p | 95% CI
+  vs static_TS              -2.6% |   +2.0% | 6/8 | p=0.383 | [-22.0%, +15.2%]
+  vs static_LogEI           +0.2% |   +3.7% | 3/8 | p=0.461 | [-23.2%, +16.7%]
+  vs rule                   -6.0% |   -6.1% | 5/8 | p=0.383 | [-29.1%, +10.3%]
+  vs random                 -6.3% |   -4.4% | 5/8 | p=0.312 | [-23.7%, +9.6%]
+  vs learned_L2             -3.0% |   -1.3% | 5/8 | p=0.742 | [-24.6%, +13.6%]
+  vs fixed_mixture_tev1     -2.5% |   +2.2% | 4/8 | p=1.000 | [-25.4%, +13.5%]

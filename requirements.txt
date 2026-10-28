@@ -1,0 +1,7 @@
+syne-tune==0.16.0
+huggingface_hub
+pandas
+pyarrow
+fastparquet
+scipy
+numpy

@@ -1,0 +1,35 @@
+== Mean AUC of normalised regret by dataset (lower is better) ==
+dataset                      LogEI          TS      random       hedge        rule  learned_L1  learned_L2oracle_onestep
+numerai28.6                  0.285       0.227       0.251       0.300       0.270       0.255       0.223       0.139
+KDDCup09_appetency           0.094       0.096       0.086       0.086       0.102       0.096       0.092       0.057
+albert                       0.073       0.066       0.116       0.124       0.092       0.072       0.123       0.041
+helena                       0.060       0.074       0.062       0.064       0.051       0.066       0.060       0.028
+vehicle                      0.024       0.019       0.020       0.028       0.029       0.026       0.025       0.005
+sylvine                      0.050       0.063       0.057       0.043       0.049       0.056       0.051       0.031
+kc1                          0.435       0.416       0.439       0.461       0.418       0.428       0.405       0.337
+christine                    0.172       0.193       0.183       0.176       0.178       0.187       0.175       0.143
+MEAN over datasets          0.1491      0.1441      0.1517      0.1603      0.1488      0.1482      0.1444      0.0975
+
+== PRIMARY: each selector vs TS ==
+  hedge        mean relative AUC change  +14.8% | better on 4/8 datasets (1 individually significant) | Wilcoxon p=0.641, Holm p=1.000
+  rule         mean relative AUC change   +7.5% | better on 3/8 datasets (1 individually significant) | Wilcoxon p=0.742, Holm p=1.000
+  learned_L1   mean relative AUC change   +4.5% | better on 3/8 datasets (0 individually significant) | Wilcoxon p=0.547, Holm p=1.000
+  learned_L2   mean relative AUC change   +8.2% | better on 6/8 datasets (0 individually significant) | Wilcoxon p=0.383, Holm p=1.000
+
+== secondary: each selector vs LogEI ==
+  hedge        mean relative AUC change  +10.8% | better on 2/8 datasets (0 individually significant) | Wilcoxon p=0.250, Holm p=1.000
+  rule         mean relative AUC change   +4.3% | better on 4/8 datasets (0 individually significant) | Wilcoxon p=1.000, Holm p=1.000
+  learned_L1   mean relative AUC change   +3.4% | better on 3/8 datasets (0 individually significant) | Wilcoxon p=0.742, Holm p=1.000
+  learned_L2   mean relative AUC change   +6.0% | better on 3/8 datasets (0 individually significant) | Wilcoxon p=1.000, Holm p=1.000
+
+== secondary: each selector vs random ==
+  hedge        mean relative AUC change   +5.9% | better on 3/8 datasets (1 individually significant) | Wilcoxon p=0.312, Holm p=1.000
+  rule         mean relative AUC change   +1.5% | better on 5/8 datasets (1 individually significant) | Wilcoxon p=0.641, Holm p=1.000
+  learned_L1   mean relative AUC change   +0.9% | better on 3/8 datasets (0 individually significant) | Wilcoxon p=0.844, Holm p=1.000
+  learned_L2   mean relative AUC change   +0.2% | better on 5/8 datasets (1 individually significant) | Wilcoxon p=0.383, Holm p=1.000
+
+== AF usage shares by selector (pooled) ==
+  hedge        {'LogEI': '8%', 'LogPI': '24%', 'UCB': '4%', 'TS': '2%', 'PosMean': '62%', 'PosSTD': '0%'}
+  rule         {'LogEI': '0%', 'LogPI': '17%', 'UCB': '65%', 'TS': '0%', 'PosMean': '18%', 'PosSTD': '0%'}
+  learned_L1   {'LogEI': '21%', 'LogPI': '18%', 'UCB': '20%', 'TS': '19%', 'PosMean': '14%', 'PosSTD': '9%'}
+  learned_L2   {'LogEI': '13%', 'LogPI': '17%', 'UCB': '19%', 'TS': '23%', 'PosMean': '12%', 'PosSTD': '17%'}

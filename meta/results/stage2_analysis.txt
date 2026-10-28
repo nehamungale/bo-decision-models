@@ -1,0 +1,15 @@
+9460 states, 30 landscapes; all-zero label share 0.70; ranked share 0.24
+M1 (all features)                    selected 0.0229 fixed 0.0219 diff +0.0010 | wins 21/30 | Wilcoxon p=0.046
+random-AF 0.0223 | per-state oracle 0.0373
+by family (mean diff, wins): {'hpob': (0.0002, 6, 10), 'lcbench': (0.002, 7, 10), 'tabrepo': (0.0008, 8, 10)}
+best fixed AF chosen when each landscape is held out: {'LogEI': 26, 'LogPI': 0, 'UCB': 1, 'TS': 0, 'PosMean': 3, 'PosSTD': 0}
+C1 label-shuffled rep 0              selected 0.0226 fixed 0.0219 diff +0.0007 | wins 16/30 | Wilcoxon p=0.215
+C1 label-shuffled rep 1              selected 0.0225 fixed 0.0219 diff +0.0006 | wins 18/30 | Wilcoxon p=0.054
+C1 label-shuffled rep 2              selected 0.0218 fixed 0.0219 diff -0.0001 | wins 14/30 | Wilcoxon p=0.455
+M1 diff minus mean shuffled diff: +0.0006, paired Wilcoxon p=0.214
+C3 cand+afid                         selected 0.0223 fixed 0.0219 diff +0.0003 | wins 18/30 | Wilcoxon p=0.131
+C3 state+desc+afid                   selected 0.0226 fixed 0.0219 diff +0.0007 | wins 17/30 | Wilcoxon p=0.104
+C3 state+afid                        selected 0.0223 fixed 0.0219 diff +0.0004 | wins 12/30 | Wilcoxon p=0.433
+C3 desc+afid                         selected 0.0224 fixed 0.0219 diff +0.0005 | wins 10/30 | Wilcoxon p=0.623
+
+STAGE 2b VERDICT: FAIL (wins 21/30 needed 20; p=0.046; vs shuffled p=0.214)
