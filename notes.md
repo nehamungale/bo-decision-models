@@ -576,3 +576,22 @@ planning and synthesis for the LLM; (6) scale is orders of magnitude beyond one 
 - Result: every cell fails the pre-declared pass rule. Noise 0 %: best case SRC GBM CV-by-dataset +3.6 % vs always-W1 (p=0.38, 16 fall-backs); TRG and ALL range from +1.9 % to -10.4 %; shuffled controls 0.0327 to 0.0413. Noise 5 %: SRC only, +2.7 % at best, -21 % at worst. Hindsight stays at 25 % but is not reachable with these features.
 - Structure of the failures: the top 10 failures hold 78 % of the total excess regret; failure is partly dataset-linked (Buzzinsocialmedia_Twitter 4 of 6 families, blood-transfusion 2/3, kc1 2/3) but no dataset fails in all of its landscapes, and 15 of 34 repeated datasets fail in some but not all. So failure depends on the (task, model family) pair, not on the dataset alone.
 - Not tried: a cost-weighted (excess-regret) target, a hedge arm with real cost, richer similarity (task-embedding) features. A post-hoc cost-weighted variant would be flagged as such.
+
+## 2026-10-28 regime grid (descriptive, existing runs, `meta/regime_grid.py`, `meta/results/regime_grid.txt`)
+36 landscapes with all of five static AFs and random AF (8 LCBench from phaseA, rest from stage2 with about 3 seeds each), all noise-free, so noise cannot be stratified from existing data.
+Ratios of stratum means. Random AF vs LogEI: +4.2 % overall, +16.7 % HPO-B, +34.7 % TabRepo, -5.2 % LCBench. The fixed AF chosen on the other landscapes vs random AF: -2.3 % overall (LCBench -14 %, TabRepo -7 %, HPO-B +42 %).
+Per-landscape spread between the best and worst of five static AFs averages 0.067 AUC (69 % of LogEI): AFs differ a lot within a landscape, but which one is best does not transfer from other landscapes. The spread is an in-sample best-minus-worst, so it overstates usable headroom (winner's curse, 3 seeds per stage2 landscape).
+So "random AF matches the best fixed AF" holds only on average and for LCBench; on HPO-B the chosen-elsewhere fixed AF is worse than random.
+
+## 2026-10-29 detection T1 (PLAN_fallback_detection.md; `meta/detect_run.py`, `meta/analyse_detect_t1.py`, `meta/results/detect_t1.txt`)
+Baselines (earlier, Amendment 4, `acq/results/phaseE_analysis.txt`): bandit_ts, sched_EI_PI, dwell rule all null vs TS and LogEI (Holm p = 1.0); dwell D=1 won tuning so the dwell arm equals the existing rule.
+Regime grid (`meta/results/regime_grid.txt`): AF choice matters within a landscape (best-worst spread 69 % of LogEI, in-sample) but the winner does not transfer (fixed AF chosen elsewhere vs random AF: -2.3 % overall, +42 % on HPO-B); noise not stratifiable.
+T1: 150 landscapes, 4 seeds per arm, 12 random seeds, 1800 units in 58 min. Mean AUC: W1 0.0329, W1+FPS(10, n0/2) +4.8 %, hedge +13.3 %, W1+FPS(10) +13.6 %, W1+random(10) +15.7 %, random +51.6 %. Failures (W1 worse than random by >5 %): 29/150.
+Gate 1: injection helps in 24 % (random) and 24 % (FPS) of failing landscapes individually, 38-41 % for either-of-two (the union is a post-hoc reading; the pre-declared wording did not say). Gate 2: realised oracle 10.6 % below always-W1 (8.7 % with selection on 2 seeds, scoring on 2), vs 26.6 % cost-free. Gate 3: hedge captures -126 % of the oracle gain (it is worse than W1).
+Positives (injection helps): 14-16 of 150 landscapes, below the 20 needed for a GBM; 3-4 of them are non-failing landscapes.
+
+## 2026-10-29 detection T2 (`meta/detect_features.py`, `meta/decide_detect.py`, `meta/results/decide_detect.txt`)
+Every cell FAIL (remedies R and F, k=10, m=n0; step-0 logreg S0, online ON, online + source reference RS, online + target random-run reference RT (upper bound), three one-feature threshold rules; CV by dataset and leave-one-family-out).
+Best realised results: RT +3 % of the oracle gain (CV by dataset, remedy R), S0 +4 % (remedy F); the 30 % bar needed 3.2 % of W1's AUC. Detectors flag 0-7 landscapes, almost never correctly (0-2 true positives); threshold rules mostly never fire because any flag loses in training folds.
+Power caveat: positives are 11 (R) and 7 (F) of 150, so a fail here is weak evidence about detectability in general; the ceiling is also only about 10 % (realised oracle), so the practical conclusion is that online fall-back is not worth building on this testbed.
+The label-shuffled control is a no-op for the threshold rules (they use no labels as classifiers), so it is not informative for them.

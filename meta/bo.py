@@ -78,9 +78,11 @@ class TrustBox:
         if self.L < self.L_min: self.L = self.L0
 
 
-def run(pool, seed, budget=50, n_init=None, kernel="rbf_ard", region=None, init_idx=None, noise_frac=0.0):
+def run(pool, seed, budget=50, n_init=None, kernel="rbf_ard", region=None, init_idx=None, noise_frac=0.0, inject=None):
     """region: None (global), a float radius (fixed box half-length), or "adaptive". noise_frac: observation noise sd as a fraction of (y_max - y_median).
-    Regret is measured on the true value of the recommended point (the one with the best *observed* value)."""
+    inject: None or (k, m, mode): at BO step k, evaluate m extra points chosen by mode ("random": uniform without replacement from the unevaluated points;
+    "fps": farthest from the observed set, max-min distance) instead of m BO steps, so the total number of evaluations (n_init + budget) is unchanged.
+    Steps before k are identical to the run without injection. Regret is measured on the true value of the recommended point (the one with the best *observed* value)."""
     n_init = n_init if n_init is not None else 2 * pool.X.shape[1] + 1
     rng = np.random.default_rng(seed)
     obs_idx = list(rng.choice(pool.X.shape[0], n_init, replace=False)) if init_idx is None else list(init_idx)
@@ -91,10 +93,19 @@ def run(pool, seed, budget=50, n_init=None, kernel="rbf_ard", region=None, init_
     y_obs = [obs(i) for i in obs_idx]
     box = TrustBox() if region == "adaptive" else None
     trace = []
+    if inject is not None:
+        k0, m_inj, mode = inject; assert mode in ("random", "fps") and 0 <= k0 and k0 + m_inj <= budget
+        inj_rng = np.random.default_rng(seed + 999)
     for t in range(budget):
         ia = np.array(obs_idx); ya = np.array(y_obs)
         mask = np.ones(pool.X.shape[0], bool); mask[ia] = False
         cand = np.where(mask)[0]
+        if inject is not None and k0 <= t < k0 + m_inj:
+            if mode == "random": chosen = int(inj_rng.choice(cand))
+            else: chosen = int(cand[int(np.argmax(np.min(np.linalg.norm(pool.X[cand][:, None, :] - pool.X[ia][None, :, :], axis=2), axis=1)))])
+            obs_idx.append(chosen); y_obs.append(obs(chosen))
+            trace.append(pool.regret(float(pool.y[obs_idx[int(np.argmax(y_obs))]])))
+            continue
         s, mu, sd = scores(pool, ia, ya, cand, seed, t, kernel)
         if region is not None:
             half = box.L if box is not None else float(region)
@@ -108,7 +119,7 @@ def run(pool, seed, budget=50, n_init=None, kernel="rbf_ard", region=None, init_
         rec = obs_idx[int(np.argmax(y_obs))]
         trace.append(pool.regret(float(pool.y[rec])))
     reg = np.array(trace)
-    return dict(regret=reg, auc=float(reg.mean()), final=float(reg[-1]))
+    return dict(regret=reg, auc=float(reg.mean()), final=float(reg[-1]), obs_idx=[int(i) for i in obs_idx], y_obs=[float(v) for v in y_obs])
 
 
 # ── warm start (W) ───────────────────────────────────────────────────────────────────────────────
@@ -153,3 +164,10 @@ def farthest_point_start(X, n0, seed):
     while len(chosen) < n0:
         j = int(np.argmax(dmin)); chosen.append(j); dmin = np.minimum(dmin, np.linalg.norm(X - X[j], axis=1))
     return chosen
+
+
+def hedge_start(n_pool, portfolio, n0, seed):
+    """Hedge initial design: the first ceil(n0/2) portfolio points plus floor(n0/2) uniformly random other points (same n0)."""
+    h = list(portfolio[: (n0 + 1) // 2]); rng = np.random.default_rng(seed + 31337)
+    rest = np.setdiff1d(np.arange(n_pool), h)
+    return h + [int(i) for i in rng.choice(rest, n0 - len(h), replace=False)]

@@ -96,3 +96,35 @@ class FixedMixture:
     W = np.array([0.070, 0.348, 0.159, 0.170, 0.048, 0.205])
     def reset(self, seed): self.rng = np.random.default_rng(seed + 9091)
     def __call__(self, step, peek): return int(self.rng.choice(len(AFS), p=self.W / self.W.sum()))
+
+
+# ── Amendment 4 baselines ──────────────────────────────────────────────────────
+
+class BetaBandit:
+    """Non-contextual Thompson sampling over the six AFs; reward = the evaluated point improved the incumbent."""
+    name = "bandit_ts"
+    def reset(self, seed):
+        self.a = np.ones(len(AFS)); self.b = np.ones(len(AFS)); self.rng = np.random.default_rng(seed + 4242)
+    def __call__(self, step, peek): return int(np.argmax(self.rng.beta(self.a, self.b)))
+    def observe(self, step, af, y, improved):
+        if improved: self.a[af] += 1
+        else: self.b[af] += 1
+
+
+class Schedule:
+    """Fixed schedule: `first` for the first `frac` of the budget, then `then` (Benjamins et al. 2022: LogEI 25 %, then LogPI)."""
+    def __init__(self, first="LogEI", then="LogPI", frac=0.25):
+        self.first, self.then, self.frac = AF_IDX[first], AF_IDX[then], frac; self.name = f"sched_{first}_{then}"
+    def __call__(self, step, peek): return self.first if 1.0 - step.state["frac_left"] < self.frac else self.then
+
+
+class DwellRule:
+    """Wraps a RuleSelector: a chosen AF is held for at least `dwell` steps before the rule may change it."""
+    def __init__(self, rule, dwell):
+        self.rule, self.dwell = rule, dwell; self.name = f"rule_dwell{dwell}"
+    def reset(self, seed): self.cur, self.held = None, 0
+    def __call__(self, step, peek):
+        want = self.rule(step, peek)
+        if self.cur is None or self.held >= self.dwell: self.cur, self.held = want, 0
+        self.held += 1
+        return self.cur

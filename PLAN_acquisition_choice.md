@@ -155,3 +155,19 @@ Reason: knowledge probe (notes.md) showed tev1:0.8b misses basic BO/Pareto vocab
   follow the model's argmax if its confidence >= the median of this campaign's earlier confidences (first 5 steps always follow), else LogEI. It needs no cross-regime calibration.
 - Comparators unchanged (TS, LogEI, tuned rule, random, learned_L2, tev1-sample) plus a state-blind fixed-mixture control using nimble-sample's own AF shares.
 - Probe on 16 states: argmax LogPI 12, LogEI 2, UCB 1, PosSTD 1; probability SD across states up to 0.14, larger than tev1's.
+
+
+---
+
+## Amendment 4 (2026-10-28): two extra numeric baselines from the portfolio/bandit literature, fixed before running
+
+Reason: the AF-choice list lacked a plain non-contextual bandit over AFs and a rule with an enforced minimum dwell time (suggested in a literature
+summary pasted by the user). Both are cheap. Same 8 dev datasets, dev seeds 0-19, same state and engine, so they are directly comparable with the
+existing static, random, hedge, rule and learned arms. The confirmatory run on held-out datasets is still not performed.
+
+- **bandit_ts** (no tuning): Beta(1,1) Thompson sampling over the six AFs; reward 1 if the evaluated point improved the incumbent, else 0; no discount; no state.
+- **rule_dwell**: the tuned rule of Amendment 1 with its parameters unchanged, wrapped so that a chosen AF is held for at least D steps before the rule may change it.
+  D in {3, 5} compared with D = 1 (the existing rule, tuning score 0.13978) on tuning seeds 100-104 over the 8 dev datasets; the best D is run on seeds 0-19.
+- **sched_EI_PI** (extra, literature default, no tuning): LogEI for the first 25 % of the budget, LogPI after (Benjamins et al. 2022).
+- Primary tests: each of the three vs TS (best pooled static) and vs LogEI, paired Wilcoxon across the 8 per-dataset mean AUCs, Holm over the six tests.
+  Prediction (written before the run): null, as for hedge, rule and learned. An improvement counts only if it survives Holm.
