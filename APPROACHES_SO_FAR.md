@@ -98,3 +98,22 @@ Committed as 8e61ba5. Not pushed.
 2. Cost-weighted fall-back target and a hedge arm (post-hoc, to be flagged).
 3. Close the warm-start line and write up.
 4. Components not yet touched: early termination, batch strategy, algorithm switching.
+
+## 9. Update 2026-10-29
+
+- **Approach E, extra AF-selection baselines (Amendment 4, `acq/results/phaseE_analysis.txt`):** non-contextual Thompson bandit (0.1441, equal to TS), LogEI-then-LogPI schedule (0.1498), minimum dwell rule (D = 1 won tuning, so it equals the tuned rule). None beats TS or LogEI (Holm p = 1.0). The AF-selection baseline table is complete.
+- **Regime grid (`meta/results/regime_grid.txt`):** AF choice matters within a landscape (best-worst spread 69 % of LogEI, in-sample), but the fixed AF chosen on other landscapes is no better than random (-2.3 % overall, +42 % on HPO-B). Claim: no learnable AF headroom, not no AF effect. Noise could not be stratified from existing runs.
+- **Approach F, online fall-back detection (`PLAN_fallback_detection.md`, `meta/results/detect_t1.txt`, `decide_detect.txt`):** 150 landscapes, 1800 units, 58 min. Insurance costs more than it saves (hedge +13 %, injection +14 to +16 %, FPS with n0/2 +5 % vs always-W1). Realised oracle 10.6 % below W1 (cost-free hindsight 26.6 %). All T2 detector cells FAIL, including the upper-bound detector that uses the target's own random runs; only 7 to 11 positives, so power is low.
+- **Next:** similarity-weighted source prior (`PLAN_source_prior.md`, draft).
+
+| Approach | Verdict |
+|---|---|
+| Bandit, schedule, dwell AF selection | Null |
+| Online fall-back detection | Fails; ceiling about 10 % |
+
+## 10. Update 2026-10-31
+- **Approach G, similarity-weighted source prior (`PLAN_source_prior.md`, `PLAN_source_prior_lcbench.md`).** T1 tuning stop rule fired (SP worse than W1 on TabRepo in all 9 configs). Exploratory diagnostic suggested a gain on 6 LCBench landscapes (-25 %). Pre-registered confirmation on 24 fresh LCBench landscapes failed: SP +7.0 % vs W1, frozen +3.4 %, uniform +0.7 %, all gates FAIL (`meta/results/sp_lcbench.txt`). On half the landscapes W1 already finds the optimum at step 0. Line closed.
+
+| Approach | Verdict |
+|---|---|
+| Similarity-weighted source prior (reactive weights) | Fails; diagnostic gain did not replicate |
