@@ -7,6 +7,7 @@ dependencies = ["numpy", "scipy", "scikit-learn"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
+research = ["torch", "gpytorch", "botorch", "pandas", "syne-tune"]   # for research/reactive_bo_jev; see its requirements.txt for pinned versions
 
 [build-system]
 requires = ["setuptools>=68"]
