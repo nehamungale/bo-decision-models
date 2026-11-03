@@ -1,0 +1,18 @@
+per landscape (label units = fraction of y_max - y_median):
+  hpob_5527/145833                           selected 0.0254 fixed(PosMean) 0.0283 mean-AF 0.0283 oracle 0.0493
+  hpob_5971/145979                           selected 0.0007 fixed(PosMean) 0.0011 mean-AF 0.0014 oracle 0.0058
+  lcbench/blood-transfusion-service-center   selected 0.0078 fixed(PosSTD) 0.0026 mean-AF 0.0068 oracle 0.0136
+  lcbench/helena                             selected 0.0242 fixed(PosMean) 0.0228 mean-AF 0.0237 oracle 0.0323
+  tabrepo_CatBoost/kr-vs-k                   selected 0.0043 fixed(PosMean) 0.0044 mean-AF 0.0045 oracle 0.0055
+  tabrepo_RandomForest/helena                selected 0.0110 fixed(PosSTD) 0.0113 mean-AF 0.0122 oracle 0.0216
+overall:
+M1 all features                    selected 0.0122 | best-fixed(train) 0.0118 | diff +0.0005 | landscapes where selected > fixed: 2/6
+mean-AF (random choice)        0.0128 | per-state oracle 0.0213
+C2/C3 afid                         selected 0.0118 | best-fixed(train) 0.0118 | diff +0.0000 | landscapes where selected > fixed: 0/6
+C2/C3 cand+afid                    selected 0.0132 | best-fixed(train) 0.0118 | diff +0.0014 | landscapes where selected > fixed: 4/6
+C2/C3 state+desc+afid              selected 0.0131 | best-fixed(train) 0.0118 | diff +0.0013 | landscapes where selected > fixed: 3/6
+C2/C3 state+afid                   selected 0.0121 | best-fixed(train) 0.0118 | diff +0.0003 | landscapes where selected > fixed: 3/6
+C2/C3 desc+afid                    selected 0.0123 | best-fixed(train) 0.0118 | diff +0.0005 | landscapes where selected > fixed: 2/6
+C1 label-shuffled (rep 0)          selected 0.0114 | best-fixed(train) 0.0118 | diff -0.0003 | landscapes where selected > fixed: 2/6
+C1 label-shuffled (rep 1)          selected 0.0114 | best-fixed(train) 0.0118 | diff -0.0004 | landscapes where selected > fixed: 2/6
+C1 label-shuffled (rep 2)          selected 0.0139 | best-fixed(train) 0.0118 | diff +0.0021 | landscapes where selected > fixed: 4/6

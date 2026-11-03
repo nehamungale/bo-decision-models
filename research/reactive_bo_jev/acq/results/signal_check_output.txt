@@ -1,0 +1,15 @@
+64000 states; base rate of 'proposal beats incumbent' per AF: {'LogEI': np.float64(0.075), 'LogPI': np.float64(0.081), 'UCB': np.float64(0.072), 'TS': np.float64(0.058), 'PosMean': np.float64(0.073), 'PosSTD': np.float64(0.031)}
+
+LODO AUROC of state -> 'AF a's proposal beats the incumbent' (mean over 8 held-out datasets):
+   {'LogEI': 0.559, 'LogPI': 0.571, 'UCB': 0.576, 'TS': 0.616, 'PosMean': 0.578, 'PosSTD': 0.707}
+
+Mean one-step normalised gain per step (mean over held-out datasets; higher is better):
+   learned argmax   0.0056
+   random AF        0.0055
+   oracle           0.0182
+   static LogEI     0.0063
+   static LogPI     0.0054
+   static UCB       0.0069
+   static TS        0.0052
+   static PosMean   0.0050
+   static PosSTD    0.0041

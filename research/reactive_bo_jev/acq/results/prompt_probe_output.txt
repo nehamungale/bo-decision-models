@@ -1,0 +1,26 @@
+
+=== tev1:0.8b ===
+Part A (prompt jargon): accuracy 64% (9/14), AUROC 0.67, mean P(true) on true 0.54 / false 0.49
+   wrong: P=0.47 truth=1: Short Gaussian-process lengthscales mean the objective is assumed to change quickly with the in
+   wrong: P=0.33 truth=1: The incumbent is the best value observed so far.
+   wrong: P=0.51 truth=0: The incumbent is the worst value observed so far.
+   wrong: P=0.53 truth=0: When all acquisition functions propose the same point, they disagree strongly.
+   wrong: P=0.69 truth=0: Little remaining budget is a reason to explore more widely rather than refine the best result.
+Part B (reading real states), 120 states:
+   The best value found has not improved for more than 5 iterations.              acc 71% (always-majority 66%) AUROC 0.65 base-rate true 66%
+   More than half of the evaluation budget remains.                               acc 51% (always-majority 51%) AUROC 0.93 base-rate true 51%
+   The last experiment improved the best value.                                   acc 77% (always-majority 94%) AUROC 1.00 base-rate true 6%
+   The last observation was surprising: it differed from the model's prediction b acc 38% (always-majority 63%) AUROC 0.75 base-rate true 37%
+   At least five different points are currently proposed by the six acquisition f acc 44% (always-majority 56%) AUROC 0.96 base-rate true 44%
+   LogEI has been used more often than any other acquisition function.            acc 88% (always-majority 85%) AUROC 0.86 base-rate true 15%
+
+=== nimble:latest ===
+Part A (prompt jargon): accuracy 93% (13/14), AUROC 1.00, mean P(true) on true 0.98 / false 0.15
+   wrong: P=0.79 truth=0: Little remaining budget is a reason to explore more widely rather than refine the best result.
+Part B (reading real states), 120 states:
+   The best value found has not improved for more than 5 iterations.              acc 95% (always-majority 66%) AUROC 1.00 base-rate true 66%
+   More than half of the evaluation budget remains.                               acc 66% (always-majority 51%) AUROC 1.00 base-rate true 51%
+   The last experiment improved the best value.                                   acc 98% (always-majority 94%) AUROC 1.00 base-rate true 6%
+   The last observation was surprising: it differed from the model's prediction b acc 98% (always-majority 63%) AUROC 1.00 base-rate true 37%
+   At least five different points are currently proposed by the six acquisition f acc 100% (always-majority 56%) AUROC 1.00 base-rate true 44%
+   LogEI has been used more often than any other acquisition function.            acc 92% (always-majority 85%) AUROC 0.99 base-rate true 15%

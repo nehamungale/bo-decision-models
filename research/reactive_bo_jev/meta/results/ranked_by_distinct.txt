@@ -1,0 +1,7 @@
+n_distinct proposals -> states, share with a ranking (LogEI cont, H=4)
+2 24 0.04
+3 95 0.08
+4 196 0.15
+5 138 0.25
+6 27 0.22
+share of ranked states with n_distinct>=3: 0.99 | share of all states with n_distinct>=3: 0.95

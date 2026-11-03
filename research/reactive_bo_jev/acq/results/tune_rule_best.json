@@ -1,0 +1,1016 @@
+{
+ "best_params": {
+  "explore": "UCB",
+  "exploit": "PosMean",
+  "default": "LogPI",
+  "a": 0.0,
+  "b": 0.2,
+  "k": 3,
+  "win_stay": true
+ },
+ "best_score": 0.13977740246164175,
+ "all_scores": {
+  "0": 0.19108594261968004,
+  "1": 0.1821270864780164,
+  "2": 0.19407672036255263,
+  "3": 0.18969532878997522,
+  "4": 0.16302560725940335,
+  "5": 0.1589006735376795,
+  "6": 0.162202867470303,
+  "7": 0.15880725312160787,
+  "8": 0.164105900061529,
+  "9": 0.1929595430142644,
+  "10": 0.1772736781186392,
+  "11": 0.18224646640576989,
+  "12": 0.16341645808069277,
+  "13": 0.18200065369718,
+  "14": 0.1913997899405251,
+  "15": 0.18072230879340598,
+  "16": 0.1944084707714831,
+  "17": 0.19596531336268824,
+  "18": 0.1575794515724353,
+  "19": 0.16756719333547654,
+  "20": 0.18200065369717996,
+  "21": 0.19328442174971858,
+  "22": 0.14754337551243507,
+  "23": 0.1561104869697776,
+  "24": 0.17803752234761025,
+  "25": 0.17792850679090544,
+  "26": 0.16281476502056597,
+  "27": 0.18104030923775472,
+  "28": 0.1885459884657927,
+  "29": 0.15374774668039695,
+  "30": 0.1832806542483368,
+  "31": 0.1649134545731367,
+  "32": 0.1774258457933212,
+  "33": 0.16370572675611172,
+  "34": 0.1860118963151133,
+  "35": 0.18194818293705328,
+  "36": 0.18511809714341376,
+  "37": 0.1830229644451876,
+  "38": 0.17440528870007982,
+  "39": 0.1952600285242456,
+  "40": 0.18200065369717996,
+  "41": 0.16587862824345417,
+  "42": 0.17792850679090544,
+  "43": 0.17716383428916657,
+  "44": 0.170328159847561,
+  "45": 0.18085228181074609,
+  "46": 0.15753829972154276,
+  "47": 0.1848146066033659,
+  "48": 0.18178587949546962,
+  "49": 0.17792850679090544,
+  "50": 0.1817858794954696,
+  "51": 0.1927913035225821,
+  "52": 0.16418240086719882,
+  "53": 0.18200065369717996,
+  "54": 0.18088166072834455,
+  "55": 0.1816898602918563,
+  "56": 0.18056376342781694,
+  "57": 0.1816898602918563,
+  "58": 0.19442119153212675,
+  "59": 0.1624753590406499,
+  "60": 0.16142591975278342,
+  "61": 0.17936165601104131,
+  "62": 0.18056376342781694,
+  "63": 0.15830908055326648,
+  "64": 0.181392236823343,
+  "65": 0.19758200768869108,
+  "66": 0.1625516802040981,
+  "67": 0.18222574840222833,
+  "68": 0.1897490323461482,
+  "69": 0.19396312633027743,
+  "70": 0.1797274769597052,
+  "71": 0.1632538747412101,
+  "72": 0.1647178786911434,
+  "73": 0.159681262401713,
+  "74": 0.17925922331831354,
+  "75": 0.17319035374885355,
+  "76": 0.16574179849717013,
+  "77": 0.16627330590837575,
+  "78": 0.1920112528212236,
+  "79": 0.15750615395017503,
+  "80": 0.17172038181165813,
+  "81": 0.191600699155397,
+  "82": 0.16749098746473257,
+  "83": 0.17561258678092295,
+  "84": 0.16258946125319435,
+  "85": 0.16220689033793978,
+  "86": 0.15112835611448439,
+  "87": 0.13977740246164175,
+  "88": 0.16966092962448964,
+  "89": 0.18871927892218832,
+  "90": 0.15902619506485166,
+  "91": 0.152284949606744,
+  "92": 0.16216858661999622,
+  "93": 0.19664463867754506,
+  "94": 0.17092465306371474,
+  "95": 0.1820548403480316,
+  "96": 0.16375933425912106,
+  "97": 0.16578730858534202,
+  "98": 0.16285557785295807,
+  "99": 0.18571685335709792
+ },
+ "configs": [
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.1,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.3,
+   "b": 0.3,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.0,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.0,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.0,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.1,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.0,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.0,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "TS",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.1,
+   "b": 0.0,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.0,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "TS",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.3,
+   "b": 0.0,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "TS",
+   "a": 0.0,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogPI",
+   "default": "TS",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.1,
+   "b": 0.0,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.0,
+   "b": 0.0,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.0,
+   "b": 0.3,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.2,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.0,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "TS",
+   "a": 0.1,
+   "b": 0.1,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogPI",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.0,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "TS",
+   "a": 0.0,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "TS",
+   "a": 0.0,
+   "b": 0.3,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.3,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.0,
+   "k": 2,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.2,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "TS",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.3,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.1,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.1,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.1,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.0,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "LogEI",
+   "a": 0.1,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.3,
+   "b": 0.1,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "PosMean",
+   "default": "UCB",
+   "a": 0.3,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 5,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 2,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.0,
+   "k": 1,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.0,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogPI",
+   "a": 0.0,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.0,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "TS",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "PosMean",
+   "default": "LogEI",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 5,
+   "win_stay": false
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 3,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "LogPI",
+   "a": 0.2,
+   "b": 0.1,
+   "k": 1,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogPI",
+   "default": "LogPI",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "TS",
+   "a": 0.2,
+   "b": 0.2,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogPI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": false
+  },
+  {
+   "explore": "PosSTD",
+   "exploit": "LogEI",
+   "default": "UCB",
+   "a": 0.1,
+   "b": 0.3,
+   "k": 8,
+   "win_stay": true
+  },
+  {
+   "explore": "UCB",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.3,
+   "k": 3,
+   "win_stay": false
+  },
+  {
+   "explore": "TS",
+   "exploit": "LogEI",
+   "default": "LogEI",
+   "a": 0.2,
+   "b": 0.0,
+   "k": 5,
+   "win_stay": false
+  }
+ ]
+}

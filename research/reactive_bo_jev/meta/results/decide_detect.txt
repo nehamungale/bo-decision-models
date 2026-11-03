@@ -1,0 +1,39 @@
+150 landscapes. always-W1 0.0329; realised oracle 0.0294 (10.6% below W1); 30 % of it = 3.2% of W1's AUC.
+
+##### remedy R: positives (injection helps by >1 %) 11/150; always-inject 0.0381 (+15.7%)
+--- CV by dataset ---
+S0         flagged   2 (true positives  0) | realised 0.0330 (+0.3% vs W1) | captures -3% of oracle | shuffled 0.0330 | p vs W1 0.841, vs S0 1.000 | FAIL
+ON         flagged   5 (true positives  0) | realised 0.0331 (+0.6% vs W1) | captures -5% of oracle | shuffled 0.0327 | p vs W1 0.910, vs S0 0.841 | FAIL
+RS         flagged   5 (true positives  0) | realised 0.0331 (+0.6% vs W1) | captures -5% of oracle | shuffled 0.0327 | p vs W1 0.910, vs S0 0.841 | FAIL
+RT         flagged   5 (true positives  1) | realised 0.0328 (-0.3% vs W1) | captures +3% of oracle | shuffled 0.0326 | p vs W1 0.500, vs S0 0.327 | FAIL (upper bound, not deployable)
+thr_gain   flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 0.159 | FAIL
+thr_refsrc flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 0.159 | FAIL
+thr_reftgt flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 0.159 | FAIL (upper bound, not deployable)
+--- CV by family ---
+S0         flagged   1 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0335 | p vs W1 1.000, vs S0 1.000 | FAIL
+ON         flagged   2 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0335 | p vs W1 1.000, vs S0 1.000 | FAIL
+RS         flagged   2 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0335 | p vs W1 1.000, vs S0 1.000 | FAIL
+RT         flagged   6 (true positives  0) | realised 0.0335 (+1.8% vs W1) | captures -17% of oracle | shuffled 0.0336 | p vs W1 0.946, vs S0 0.946 | FAIL (upper bound, not deployable)
+thr_gain   flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 1.000 | FAIL
+thr_refsrc flagged   2 (true positives  0) | realised 0.0338 (+2.6% vs W1) | captures -24% of oracle | shuffled 0.0338 | p vs W1 0.841, vs S0 0.841 | FAIL
+thr_reftgt flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 1.000 | FAIL (upper bound, not deployable)
+
+##### remedy F: positives (injection helps by >1 %) 7/150; always-inject 0.0374 (+13.6%)
+--- CV by dataset ---
+S0         flagged   2 (true positives  1) | realised 0.0328 (-0.5% vs W1) | captures +4% of oracle | shuffled 0.0329 | p vs W1 0.159, vs S0 1.000 | FAIL
+ON         flagged   3 (true positives  1) | realised 0.0328 (-0.3% vs W1) | captures +2% of oracle | shuffled 0.0330 | p vs W1 0.327, vs S0 0.841 | FAIL
+RS         flagged   3 (true positives  1) | realised 0.0328 (-0.3% vs W1) | captures +2% of oracle | shuffled 0.0330 | p vs W1 0.327, vs S0 0.841 | FAIL
+RT         flagged   3 (true positives  1) | realised 0.0328 (-0.2% vs W1) | captures +2% of oracle | shuffled 0.0330 | p vs W1 0.500, vs S0 0.910 | FAIL (upper bound, not deployable)
+thr_gain   flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 0.841 | FAIL
+thr_refsrc flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 0.841 | FAIL
+thr_reftgt flagged   7 (true positives  2) | realised 0.0349 (+6.1% vs W1) | captures -57% of oracle | shuffled 0.0349 | p vs W1 0.936, vs S0 0.954 | FAIL (upper bound, not deployable)
+--- CV by family ---
+S0         flagged   1 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0333 | p vs W1 1.000, vs S0 1.000 | FAIL
+ON         flagged   1 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0334 | p vs W1 1.000, vs S0 1.000 | FAIL
+RS         flagged   2 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0334 | p vs W1 1.000, vs S0 1.000 | FAIL
+RT         flagged   1 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0334 | p vs W1 1.000, vs S0 1.000 | FAIL (upper bound, not deployable)
+thr_gain   flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 1.000 | FAIL
+thr_refsrc flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 1.000 | FAIL
+thr_reftgt flagged   0 (true positives  0) | realised 0.0329 (+0.0% vs W1) | captures +0% of oracle | shuffled 0.0329 | p vs W1 1.000, vs S0 1.000 | FAIL (upper bound, not deployable)
+
+A PASS needs: captures >= 30 % of the realised oracle gain, below the step-0 detector and below always-W1 with p < 0.05 each, and below its shuffled control.

@@ -1,0 +1,1331 @@
+{
+ "seed": 20261031,
+ "quota": {
+  "pilot": 5,
+  "tuning": 10,
+  "test": 25
+ },
+ "groups": {
+  "lcbench": {
+   "n_tasks": 30,
+   "q33": 0.42903524347650074,
+   "q67": 0.6561783732972615
+  },
+  "tabrepo_CatBoost": {
+   "n_tasks": 239,
+   "q33": -0.11938507416569341,
+   "q67": 0.26346818550522594
+  },
+  "tabrepo_ExtraTrees": {
+   "n_tasks": 233,
+   "q33": 0.501313105127309,
+   "q67": 0.8602562845659583
+  },
+  "tabrepo_LightGBM": {
+   "n_tasks": 235,
+   "q33": -0.13533788344708625,
+   "q67": 0.3046167296495363
+  },
+  "tabrepo_NeuralNetTorch": {
+   "n_tasks": 238,
+   "q33": 0.1987778188327895,
+   "q67": 0.43325265625095294
+  },
+  "tabrepo_RandomForest": {
+   "n_tasks": 222,
+   "q33": 0.25334220687919745,
+   "q67": 0.7159015714031347
+  },
+  "tabrepo_XGBoost": {
+   "n_tasks": 236,
+   "q33": -0.08903472586814672,
+   "q67": 0.2912712817820444
+  }
+ },
+ "pilot": [
+  {
+   "A": "lcbench/kr-vs-kp",
+   "B": "lcbench/vehicle",
+   "spearman": 0.9035963081766414,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/volkert",
+   "B": "lcbench/albert",
+   "spearman": 0.8493137981946266,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Australian",
+   "B": "lcbench/credit-g",
+   "spearman": 0.7574415950628973,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/credit-g",
+   "B": "lcbench/jasmine",
+   "spearman": 0.7720154364975773,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Amazon_employee_access",
+   "B": "lcbench/numerai28.6",
+   "spearman": 0.6620675624896042,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "tabrepo_CatBoost/tecator",
+   "B": "tabrepo_CatBoost/balance-scale",
+   "spearman": 0.77779194479862,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/rmftsa_ladata",
+   "B": "tabrepo_ExtraTrees/OVA_Breast",
+   "spearman": 0.9102211641503849,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/UMIST_Faces_Cropped",
+   "B": "tabrepo_LightGBM/delta_elevators",
+   "spearman": 0.6489822245556144,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/optdigits",
+   "B": "tabrepo_NeuralNetTorch/pc1",
+   "spearman": 0.7168814220355504,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/hiva_agnostic",
+   "B": "tabrepo_RandomForest/yprop_4_1",
+   "spearman": 0.7566904495934085,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "lcbench/albert",
+   "B": "lcbench/Australian",
+   "spearman": 0.3112488406951143,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/helena",
+   "B": "lcbench/christine",
+   "spearman": 0.04523921225886691,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/APSFailure",
+   "B": "lcbench/jasmine",
+   "spearman": 0.2564345705286602,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/blood-transfusion-service-center",
+   "B": "lcbench/jungle_chess_2pcs_raw_endgame_complete",
+   "spearman": 0.4003851746018705,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/mfeat-factors",
+   "B": "lcbench/APSFailure",
+   "spearman": 0.3406983943640744,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/OVA_Endometrium",
+   "B": "tabrepo_NeuralNetTorch/GTSRB-HOG01",
+   "spearman": 0.10861021525538138,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/sensory",
+   "B": "tabrepo_RandomForest/SpeedDating",
+   "spearman": 0.20760364286965635,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/volcanoes-b6",
+   "B": "tabrepo_XGBoost/airlines",
+   "spearman": -0.42835011938430967,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/jannis",
+   "B": "tabrepo_CatBoost/GTSRB-HOG01",
+   "spearman": -0.15099077476936928,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/churn",
+   "B": "tabrepo_ExtraTrees/volcanoes-a4",
+   "spearman": 0.05830798551670474,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  }
+ ],
+ "tuning": [
+  {
+   "A": "lcbench/blood-transfusion-service-center",
+   "B": "lcbench/mfeat-factors",
+   "spearman": 0.7918136443554303,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/credit-g",
+   "B": "lcbench/mfeat-factors",
+   "spearman": 0.7995559712787554,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/credit-g",
+   "B": "lcbench/nomao",
+   "spearman": 0.6566673145155858,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/APSFailure",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.7425622126533369,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/albert",
+   "B": "lcbench/Fashion-MNIST",
+   "spearman": 0.7738843571104785,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Australian",
+   "B": "lcbench/phoneme",
+   "spearman": 0.6568267490223374,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/albert",
+   "B": "lcbench/helena",
+   "spearman": 0.7645844687658094,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/kr-vs-kp",
+   "B": "lcbench/Fashion-MNIST",
+   "spearman": 0.7376601209388863,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Fashion-MNIST",
+   "B": "lcbench/higgs",
+   "spearman": 0.778104094063661,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/cnae-9",
+   "B": "lcbench/sylvine",
+   "spearman": 0.8366022200171895,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "tabrepo_CatBoost/fri_c1_1000_50",
+   "B": "tabrepo_CatBoost/fri_c0_1000_5",
+   "spearman": 0.2791422143752444,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/mfeat-factors",
+   "B": "tabrepo_ExtraTrees/GesturePhaseSegmentationProcessed",
+   "spearman": 0.9644417588553648,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/numerai28_6",
+   "B": "tabrepo_LightGBM/pc2",
+   "spearman": 0.5946373659341485,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/har",
+   "B": "tabrepo_NeuralNetTorch/phoneme",
+   "spearman": 0.5683132078301958,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/optdigits",
+   "B": "tabrepo_RandomForest/socmob",
+   "spearman": 0.9094851906869922,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/elevators",
+   "B": "tabrepo_XGBoost/climate-model-simulation-crashes",
+   "spearman": 0.3963305766303811,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/synthetic_control",
+   "B": "tabrepo_CatBoost/APSFailure",
+   "spearman": 0.46879471986799687,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/diamonds",
+   "B": "tabrepo_ExtraTrees/spoken-arabic-digit",
+   "spearman": 0.9067182338846711,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/pbcseq",
+   "B": "tabrepo_LightGBM/pol",
+   "spearman": 0.5334643366084154,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/QSAR-TID-10980",
+   "B": "tabrepo_NeuralNetTorch/mammography",
+   "spearman": 0.4672016800420011,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "lcbench/APSFailure",
+   "B": "lcbench/helena",
+   "spearman": 0.25750042414579705,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Australian",
+   "B": "lcbench/Amazon_employee_access",
+   "spearman": 0.1202727636586154,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/sylvine",
+   "B": "lcbench/Amazon_employee_access",
+   "spearman": 0.18905488051236408,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/numerai28.6",
+   "B": "lcbench/APSFailure",
+   "spearman": 0.1403046648225853,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jungle_chess_2pcs_raw_endgame_complete",
+   "B": "lcbench/helena",
+   "spearman": 0.3601626382178037,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/sylvine",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.2986684266445059,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/credit-g",
+   "B": "lcbench/albert",
+   "spearman": 0.4262136407945927,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Australian",
+   "B": "lcbench/helena",
+   "spearman": 0.25534051532714575,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jasmine",
+   "B": "lcbench/albert",
+   "spearman": 0.388357523237679,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/christine",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.2559085795538879,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/OVA_Kidney",
+   "B": "tabrepo_NeuralNetTorch/pokerhand",
+   "spearman": -0.2037322461053946,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/led24",
+   "B": "tabrepo_RandomForest/spambase",
+   "spearman": 0.059895690126719366,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/waveform-5000",
+   "B": "tabrepo_XGBoost/GAMETES_Epistasis_3-Way_20atts_0_2H_EDM-1_1",
+   "spearman": -0.3826310657766446,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/cnae-9",
+   "B": "tabrepo_CatBoost/volcanoes-b5",
+   "spearman": -0.2129904046315326,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/ada",
+   "B": "tabrepo_ExtraTrees/volcanoes-b6",
+   "spearman": 0.01767498270240044,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/meta",
+   "B": "tabrepo_LightGBM/volcanoes-a3",
+   "spearman": -0.20639414204709172,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/kdd_el_nino-small",
+   "B": "tabrepo_NeuralNetTorch/MIP-2016-regression",
+   "spearman": 0.006351840067384944,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/dresses-sales",
+   "B": "tabrepo_RandomForest/pbcseq",
+   "spearman": -0.3490154529367343,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/kick",
+   "B": "tabrepo_XGBoost/parity5_plus_5",
+   "spearman": -0.19444907021233265,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/tokyo1",
+   "B": "tabrepo_CatBoost/autoUniv-au7-1100",
+   "spearman": -0.13175958454949277,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  }
+ ],
+ "test": [
+  {
+   "A": "lcbench/nomao",
+   "B": "lcbench/cnae-9",
+   "spearman": 0.6731454880625607,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jasmine",
+   "B": "lcbench/nomao",
+   "spearman": 0.7321463118910252,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/phoneme",
+   "B": "lcbench/car",
+   "spearman": 0.7465152969217131,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/adult",
+   "B": "lcbench/nomao",
+   "spearman": 0.8665013256705966,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/cnae-9",
+   "B": "lcbench/kr-vs-kp",
+   "spearman": 0.8637082852171216,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/adult",
+   "B": "lcbench/bank-marketing",
+   "spearman": 0.8414891436494357,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jannis",
+   "B": "lcbench/Fashion-MNIST",
+   "spearman": 0.8969467278455617,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/helena",
+   "B": "lcbench/Amazon_employee_access",
+   "spearman": 0.7032230330486682,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/connect-4",
+   "B": "lcbench/higgs",
+   "spearman": 0.9071038393231584,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/vehicle",
+   "B": "lcbench/segment",
+   "spearman": 0.9166928780967525,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jannis",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.6848327715913881,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/nomao",
+   "B": "lcbench/Fashion-MNIST",
+   "spearman": 0.7963046925017332,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/albert",
+   "B": "lcbench/jannis",
+   "spearman": 0.816890536792208,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/cnae-9",
+   "B": "lcbench/vehicle",
+   "spearman": 0.8969213390589501,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/segment",
+   "B": "lcbench/bank-marketing",
+   "spearman": 0.671929337815939,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/credit-g",
+   "B": "lcbench/vehicle",
+   "spearman": 0.8152218169591451,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/vehicle",
+   "B": "lcbench/jasmine",
+   "spearman": 0.8506271592535385,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/volkert",
+   "B": "lcbench/adult",
+   "spearman": 0.7444294899919145,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/vehicle",
+   "B": "lcbench/nomao",
+   "spearman": 0.6766599125510275,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/vehicle",
+   "B": "lcbench/sylvine",
+   "spearman": 0.8715930148336766,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Fashion-MNIST",
+   "B": "lcbench/connect-4",
+   "spearman": 0.6800782296467144,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Australian",
+   "B": "lcbench/nomao",
+   "spearman": 0.7119460587044693,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/numerai28.6",
+   "B": "lcbench/connect-4",
+   "spearman": 0.7531126281933305,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/volkert",
+   "B": "lcbench/covertype",
+   "spearman": 0.7685361394864428,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Fashion-MNIST",
+   "B": "lcbench/helena",
+   "spearman": 0.7347877595808213,
+   "relatedness": "related",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "tabrepo_CatBoost/wilt",
+   "B": "tabrepo_CatBoost/guillermo",
+   "spearman": 0.35516141177781185,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/volkert",
+   "B": "tabrepo_ExtraTrees/splice",
+   "spearman": 0.8931077196860925,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/balance-scale",
+   "B": "tabrepo_LightGBM/semeion",
+   "spearman": 0.47997899947498673,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/black_friday",
+   "B": "tabrepo_NeuralNetTorch/pendigits",
+   "spearman": 0.504756618915473,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/black_friday",
+   "B": "tabrepo_RandomForest/airlines",
+   "spearman": 0.7305905241916606,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/madelon",
+   "B": "tabrepo_XGBoost/Higgs",
+   "spearman": 0.8062176554413861,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/MiceProtein",
+   "B": "tabrepo_CatBoost/nyc-taxi-green-dec-2016",
+   "spearman": 0.666381159528988,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/pendigits",
+   "B": "tabrepo_ExtraTrees/artificial-characters",
+   "spearman": 0.9930238237471011,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/bank32nh",
+   "B": "tabrepo_LightGBM/ringnorm",
+   "spearman": 0.865635965512686,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/nyc-taxi-green-dec-2016",
+   "B": "tabrepo_NeuralNetTorch/pokerhand",
+   "spearman": 0.5909529331175105,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/fri_c0_1000_5",
+   "B": "tabrepo_RandomForest/Bioresponse",
+   "spearman": 0.7870222736666569,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/satimage",
+   "B": "tabrepo_XGBoost/mc1",
+   "spearman": 0.4588398313212733,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/led24",
+   "B": "tabrepo_CatBoost/blood-transfusion-service-center",
+   "spearman": 0.5861892840166856,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/semeion",
+   "B": "tabrepo_ExtraTrees/electricity",
+   "spearman": 0.9515906601811572,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/colleges",
+   "B": "tabrepo_LightGBM/topo_2_1",
+   "spearman": 0.6223160579014477,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/wall-robot-navigation",
+   "B": "tabrepo_NeuralNetTorch/jannis",
+   "spearman": 0.7927893197329938,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/artificial-characters",
+   "B": "tabrepo_RandomForest/elevators",
+   "spearman": 0.8338581503649923,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/fabert",
+   "B": "tabrepo_XGBoost/spambase",
+   "spearman": 0.6168321521159034,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/balance-scale",
+   "B": "tabrepo_CatBoost/fri_c3_500_50",
+   "spearman": 0.37107447500798324,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/GTSRB-HOG03",
+   "B": "tabrepo_ExtraTrees/Higgs",
+   "spearman": 0.9141326342220971,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/cpu_small",
+   "B": "tabrepo_LightGBM/shuttle",
+   "spearman": 0.48090602265056626,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/albert",
+   "B": "tabrepo_NeuralNetTorch/volkert",
+   "spearman": 0.7174439360984028,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/boston",
+   "B": "tabrepo_RandomForest/pm10",
+   "spearman": 0.9714054921232477,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/cylinder-bands",
+   "B": "tabrepo_XGBoost/kdd_el_nino-small",
+   "spearman": 0.5849404089808137,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/OVA_Endometrium",
+   "B": "tabrepo_CatBoost/fri_c2_1000_25",
+   "spearman": 0.5697612759949313,
+   "relatedness": "related",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "lcbench/jasmine",
+   "B": "lcbench/Amazon_employee_access",
+   "spearman": 0.19077264814336492,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/higgs",
+   "B": "lcbench/christine",
+   "spearman": 0.18031809992253744,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/APSFailure",
+   "B": "lcbench/car",
+   "spearman": 0.19050672468341842,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/connect-4",
+   "B": "lcbench/blood-transfusion-service-center",
+   "spearman": 0.39367221573955863,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/KDDCup09_appetency",
+   "B": "lcbench/car",
+   "spearman": 0.11443449459498335,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/vehicle",
+   "B": "lcbench/numerai28.6",
+   "spearman": 0.23589717030984542,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/christine",
+   "B": "lcbench/jasmine",
+   "spearman": 0.4285439708901739,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/christine",
+   "B": "lcbench/jungle_chess_2pcs_raw_endgame_complete",
+   "spearman": 0.3305880407268348,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/kc1",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.16856878381168203,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/phoneme",
+   "B": "lcbench/albert",
+   "spearman": 0.2957884191950526,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/numerai28.6",
+   "B": "lcbench/credit-g",
+   "spearman": 0.1271621951287962,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/mfeat-factors",
+   "B": "lcbench/covertype",
+   "spearman": 0.39247831718198717,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/segment",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.3851871883456077,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/car",
+   "B": "lcbench/Amazon_employee_access",
+   "spearman": 0.09964782295453264,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jungle_chess_2pcs_raw_endgame_complete",
+   "B": "lcbench/jasmine",
+   "spearman": 0.2594481850783916,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/KDDCup09_appetency",
+   "B": "lcbench/jungle_chess_2pcs_raw_endgame_complete",
+   "spearman": 0.30677545056093525,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/numerai28.6",
+   "B": "lcbench/phoneme",
+   "spearman": -0.039006973040428404,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/connect-4",
+   "B": "lcbench/kr-vs-kp",
+   "spearman": 0.40920825388170917,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/higgs",
+   "B": "lcbench/APSFailure",
+   "spearman": 0.33804799171559274,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/numerai28.6",
+   "B": "lcbench/jasmine",
+   "spearman": 0.1600459100772067,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/jungle_chess_2pcs_raw_endgame_complete",
+   "B": "lcbench/sylvine",
+   "spearman": 0.42191629566796135,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/covertype",
+   "B": "lcbench/blood-transfusion-service-center",
+   "spearman": 0.31532918437988716,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/connect-4",
+   "B": "lcbench/christine",
+   "spearman": 0.12825612489486718,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/APSFailure",
+   "B": "lcbench/kc1",
+   "spearman": 0.11443121404663587,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "lcbench/Australian",
+   "B": "lcbench/KDDCup09_appetency",
+   "spearman": 0.18166764404125302,
+   "relatedness": "unrelated",
+   "stratum": "lcbench",
+   "group": "lcbench"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/bank32nh",
+   "B": "tabrepo_NeuralNetTorch/car",
+   "spearman": 0.17694442361059023,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/helena",
+   "B": "tabrepo_RandomForest/QSAR-TID-11",
+   "spearman": -0.6671155392987919,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/topo_2_1",
+   "B": "tabrepo_XGBoost/GAMETES_Epistasis_2-Way_1000atts_0_4H_EDM-1_EDM-1_1",
+   "spearman": -0.16026700667516686,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/wine-quality-red",
+   "B": "tabrepo_CatBoost/ada",
+   "spearman": -0.8286267156678921,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/colleges",
+   "B": "tabrepo_ExtraTrees/pc2",
+   "spearman": -0.3953926585228162,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/christine",
+   "B": "tabrepo_LightGBM/fabert",
+   "spearman": -0.31774256271755125,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/ilpd",
+   "B": "tabrepo_NeuralNetTorch/spoken-arabic-digit",
+   "spearman": -0.1605378700607681,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/OVA_Prostate",
+   "B": "tabrepo_RandomForest/one-hundred-plants-margin",
+   "spearman": -0.6394379181531001,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/tecator",
+   "B": "tabrepo_XGBoost/dilbert",
+   "spearman": -0.24348008700217508,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/mnist_784",
+   "B": "tabrepo_CatBoost/yprop_4_1",
+   "spearman": -0.18142953573839338,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/topo_2_1",
+   "B": "tabrepo_ExtraTrees/letter",
+   "spearman": 0.4907492950594794,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/albert",
+   "B": "tabrepo_LightGBM/airlines",
+   "spearman": -0.36404048752739643,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/porto-seguro",
+   "B": "tabrepo_NeuralNetTorch/sensory",
+   "spearman": -0.015475886897172393,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/kin8nm",
+   "B": "tabrepo_RandomForest/GAMETES_Epistasis_2-Way_1000atts_0_4H_EDM-1_EDM-1_1",
+   "spearman": 0.24209337801640787,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/QSAR-TID-10980",
+   "B": "tabrepo_XGBoost/arsenic-female-bladder",
+   "spearman": -0.3313594067647114,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/kick",
+   "B": "tabrepo_CatBoost/GTSRB-HueHist",
+   "spearman": -0.39679891997299943,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/helena",
+   "B": "tabrepo_ExtraTrees/GTSRB-HueHist",
+   "spearman": -0.19149957620487718,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/hypothyroid",
+   "B": "tabrepo_LightGBM/helena",
+   "spearman": -0.4646456161404037,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/semeion",
+   "B": "tabrepo_NeuralNetTorch/cmc",
+   "spearman": -0.152771319282982,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  },
+  {
+   "A": "tabrepo_RandomForest/mammography",
+   "B": "tabrepo_RandomForest/Indian_pines",
+   "spearman": -0.006817475005708457,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_RandomForest"
+  },
+  {
+   "A": "tabrepo_XGBoost/boston",
+   "B": "tabrepo_XGBoost/Run_or_walk_information",
+   "spearman": -0.5301912547813695,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_XGBoost"
+  },
+  {
+   "A": "tabrepo_CatBoost/SpeedDating",
+   "B": "tabrepo_CatBoost/hypothyroid",
+   "spearman": -0.4604470111752795,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_CatBoost"
+  },
+  {
+   "A": "tabrepo_ExtraTrees/mammography",
+   "B": "tabrepo_ExtraTrees/helena",
+   "spearman": -0.05320093426861031,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_ExtraTrees"
+  },
+  {
+   "A": "tabrepo_LightGBM/Mercedes_Benz_Greener_Manufacturing",
+   "B": "tabrepo_LightGBM/wine_quality",
+   "spearman": -0.6046291157278934,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_LightGBM"
+  },
+  {
+   "A": "tabrepo_NeuralNetTorch/synthetic_control",
+   "B": "tabrepo_NeuralNetTorch/Allstate_Claims_Severity",
+   "spearman": -0.13022318093551388,
+   "relatedness": "unrelated",
+   "stratum": "tabrepo",
+   "group": "tabrepo_NeuralNetTorch"
+  }
+ ]
+}

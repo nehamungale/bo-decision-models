@@ -1,0 +1,41 @@
+150 landscapes run; skipped (fewer than 8 training tasks): 0; no room for injection (k+m > budget): 0; analysed: 150
+
+Mean AUC over landscapes (seed-averaged; ratio vs W1 in brackets):
+  random   0.0499  (+51.6%)
+  W1       0.0329  (+0.0%)
+  hedge    0.0373  (+13.3%)
+  W1R10    0.0381  (+15.7%)
+  W1F10    0.0374  (+13.6%)
+  W1F10h   0.0345  (+4.8%)
+  W1R5     0.0401  (+21.7%)
+  W1F5     0.0395  (+19.9%)
+
+Failure (W1 worse than random by > 5 % of random AUC): 29/150  | by family: {'lcbench': '4/30', 'tabrepo_CatBoost': '8/20', 'tabrepo_ExtraTrees': '3/20', 'tabrepo_LightGBM': '6/20', 'tabrepo_NeuralNetTorch': '1/20', 'tabrepo_RandomForest': '1/20', 'tabrepo_XGBoost': '6/20'}
+
+Cross-tab, epsilon 0% (k=10, m=n0):   injection helps | among 29 failing | among 121 non-failing
+   random    12/150 landscapes | 8/29 = 28% | 4/121 = 3%
+   fps        7/150 landscapes | 7/29 = 24% | 0/121 = 0%
+   either    16/150 landscapes | 12/29 = 41% | 4/121 = 3%
+
+Cross-tab, epsilon 1% (k=10, m=n0):   injection helps | among 29 failing | among 121 non-failing
+   random    11/150 landscapes | 7/29 = 24% | 4/121 = 3%
+   fps        7/150 landscapes | 7/29 = 24% | 0/121 = 0%
+   either    15/150 landscapes | 11/29 = 38% | 4/121 = 3%
+
+Cross-tab, epsilon 2% (k=10, m=n0):   injection helps | among 29 failing | among 121 non-failing
+   random    10/150 landscapes | 7/29 = 24% | 3/121 = 2%
+   fps        7/150 landscapes | 7/29 = 24% | 0/121 = 0%
+   either    14/150 landscapes | 11/29 = 38% | 3/121 = 2%
+
+Realised oracle (best of W1, W1R10, W1F10 per landscape): in-sample 0.0294 = 10.6% below always-W1 (0.0329); selected on 2 seeds, scored on the other 2: 0.0301 = 8.7%
+Cost-free hindsight (min of W1, random per landscape): 0.0242 = 26.6% below always-W1 (the earlier w150 number)
+
+Share of the realised oracle gain captured by fixed arms (negative = worse than always-W1):
+   always-hedge   -126%  (AUC 0.0373)
+   always-W1F10   -128%  (AUC 0.0374)
+   always-W1R10   -147%  (AUC 0.0381)
+   always-W1F10h  -45%  (AUC 0.0345)
+   always-random  -486%  (AUC 0.0499)
+   best fixed arm: W1 (0.0329); share +0%
+
+Stop gates: (1) injection helps in >= 30 % of failing landscapes; (2) realised oracle gain >= 5 % of W1; (3) hedge captures <= 70 % of the oracle gain.

@@ -1,0 +1,13 @@
+landscape                                states  allzero(LogEI) allzero(UCB)  defined  mean_rho  shuffled  top1_agree  nonzero_mean
+hpob_5527/145833                            80         0.57         0.56     0.31     0.466     0.028       0.58   0.0255
+hpob_5971/145979                            80         0.84         0.85     0.09     0.566     0.518       0.57   0.0017
+lcbench/blood-transfusion-service-center    80         0.94         0.95     0.04     0.611       nan       0.75   0.0075
+lcbench/helena                              80         0.59         0.60     0.19     0.628     0.302       0.76   0.0235
+tabrepo_CatBoost/kr-vs-k                    80         0.82         0.82     0.05     0.456       nan       0.86   0.0045
+tabrepo_RandomForest/helena                 80         0.79         0.74     0.11     0.960     0.069       0.94   0.0111
+
+mean within-state Spearman across landscapes 0.614 (landscape-bootstrap 95% CI [0.504 0.763]), shuffled control nan
+state-pooled: rho 0.592 on 63 defined of 480 states; shuffled -0.091
+mean share of states with all-zero labels (LogEI continuation): 0.76; share of states with a defined ranking: 0.13
+G0 (as pre-registered, on states where a ranking exists): PASS | rho 0.592 vs shuffled -0.091
+Sparsity check (plan: >~90% all-zero would mean too sparse): ok at the landscape mean; per-landscape range printed above

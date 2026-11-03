@@ -1,0 +1,7 @@
+steps logged: 4000; median |z| 0.73 (calibrated reference 0.67 median, 0.8 mean); mean |z| 1.89
+stationary: mean within-campaign Spearman(|z|, distance to nearest earlier observation) -0.07, Spearman(|z|, posterior sd) -0.14  (40 campaigns)
+change: mean within-campaign Spearman(|z|, distance to nearest earlier observation) -0.18, Spearman(|z|, posterior sd) -0.17  (40 campaigns)
+stationary |z| median by distance tertile: low 0.67, mid 0.69, high 0.59
+stationary campaigns with a CUSUM crossing at h = 32 (from the logged steps): 2 of 40; crossing step in top distance tertile: 2
+change runs: mean |z| at T_c..T_c+3 5.69 vs other steps 2.18
+reading rule (9g): H_explore if mean Spearman(|z|, distance) >= 0.3 and high-tertile median >= 1.5 x low-tertile; H_miscal if low-tertile median |z| > 1.2

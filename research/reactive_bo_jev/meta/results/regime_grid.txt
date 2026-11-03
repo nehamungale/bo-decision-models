@@ -1,0 +1,23 @@
+36 landscapes with all of ['LogEI', 'LogPI', 'UCB', 'TS', 'PosMean', 'random'] (phaseA: 8 LCBench, stage2: rest). All noise-free. In-sample, descriptive; no gate.
+
+== all ==
+stratum            n   LogEI      TS  random LOO-best rand/LogEI LOObest/rand spread(abs) spread/LogEI
+all               36   0.097   0.090   0.101    0.099      +4.2%        -2.3%       0.067        68.6%
+
+== family ==
+stratum            n   LogEI      TS  random LOO-best rand/LogEI LOObest/rand spread(abs) spread/LogEI
+hpob              10   0.059   0.084   0.068    0.097     +16.7%       +42.4%       0.069       116.9%
+lcbench           16   0.151   0.116   0.143    0.122      -5.2%       -14.3%       0.076        50.4%
+tabrepo           10   0.050   0.054   0.068    0.063     +34.7%        -6.8%       0.050        99.3%
+
+== dimension ==
+stratum            n   LogEI      TS  random LOO-best rand/LogEI LOObest/rand spread(abs) spread/LogEI
+d<=6              11   0.064   0.085   0.076    0.089     +18.8%       +17.9%       0.059        92.0%
+d7-10             25   0.112   0.092   0.113    0.103      +0.6%        -8.3%       0.070        62.7%
+
+== budget ==
+stratum            n   LogEI      TS  random LOO-best rand/LogEI LOObest/rand spread(abs) spread/LogEI
+budget<50          1   0.008   0.009   0.015    0.011     +73.8%       -28.8%       0.016       188.0%
+budget=50         35   0.100   0.092   0.104    0.102      +4.0%        -2.2%       0.068        68.3%
+
+All columns are ratios of stratum means (mean AUC), not means of per-landscape ratios, which blow up where AUC is near zero. rand/LogEI: random AF vs LogEI (positive = random worse). LOO-best: AUC of the fixed AF chosen on the other landscapes; LOObest/rand: relative to random AF (negative = best fixed better). spread: worst minus best of the five static AFs, per landscape, averaged.

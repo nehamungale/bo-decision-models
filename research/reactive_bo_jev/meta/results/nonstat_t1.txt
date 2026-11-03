@@ -1,0 +1,58 @@
+units: 160 change, 80 stationary
+
+== related x abrupt (10 pairs, 4 seeds, both T_c): post-change AUC, ratio of means vs oblivious
+   oracle_time     +36.9%  (p 0.8623; mean-of-ratios +1580.5%)
+   oracle_target   -41.1%  (p 0.1611; mean-of-ratios +661.7%)
+   oracle_keep     -50.5%  (p 0.0527; mean-of-ratios +491.8%)
+   window          +17.3%  (p 0.9727; mean-of-ratios +627.6%)
+   periodic       +124.6%  (p 0.9971; mean-of-ratios +2813.5%)
+   by T_c=25%: oracle_time +25.5%, oracle_target -45.3%, periodic +147.0%
+   by T_c=50%: oracle_time +47.0%, oracle_target -37.3%, periodic +104.7%
+   stratum lcbench (5 pairs): oracle_time +82.1%, oracle_target -8.8%, oblivious AUC 0.244
+   stratum tabrepo (5 pairs): oracle_time -0.4%, oracle_target -67.6%, oblivious AUC 0.297
+
+== related x partial (10 pairs, 4 seeds, both T_c): post-change AUC, ratio of means vs oblivious
+   oracle_time    +143.3%  (p 0.9902; mean-of-ratios +997.4%)
+   oracle_target    -5.1%  (p 0.6152; mean-of-ratios +228.2%)
+   oracle_keep     -18.5%  (p 0.3125; mean-of-ratios +115.3%)
+   window          +23.6%  (p 0.7520; mean-of-ratios +133.4%)
+   periodic       +309.9%  (p 0.9990; mean-of-ratios +1822.0%)
+   by T_c=25%: oracle_time +85.6%, oracle_target -24.6%, periodic +284.3%
+   by T_c=50%: oracle_time +216.5%, oracle_target +19.7%, periodic +342.4%
+   stratum lcbench (5 pairs): oracle_time +186.3%, oracle_target +9.8%, oblivious AUC 0.136
+   stratum tabrepo (5 pairs): oracle_time +102.6%, oracle_target -19.2%, oblivious AUC 0.143
+
+== unrelated x abrupt (10 pairs, 4 seeds, both T_c): post-change AUC, ratio of means vs oblivious
+   oracle_time     -80.0%  (p 0.0068; mean-of-ratios -48.2%)
+   oracle_target   -90.8%  (p 0.0010; mean-of-ratios -76.5%)
+   oracle_keep     -74.9%  (p 0.0010; mean-of-ratios -57.8%)
+   window           +0.3%  (p 0.2305; mean-of-ratios +2.6%)
+   periodic        -60.1%  (p 0.1162; mean-of-ratios -2.3%)
+   by T_c=25%: oracle_time -82.5%, oracle_target -91.5%, periodic -57.9%
+   by T_c=50%: oracle_time -77.7%, oracle_target -90.0%, periodic -62.2%
+   stratum lcbench (5 pairs): oracle_time -41.4%, oracle_target -61.0%, oblivious AUC 0.612
+   stratum tabrepo (5 pairs): oracle_time -88.8%, oracle_target -97.5%, oblivious AUC 2.677
+
+== unrelated x partial (10 pairs, 4 seeds, both T_c): post-change AUC, ratio of means vs oblivious
+   oracle_time     -68.2%  (p 0.0420; mean-of-ratios +17.4%)
+   oracle_target   -87.0%  (p 0.0029; mean-of-ratios -65.3%)
+   oracle_keep     -82.2%  (p 0.0010; mean-of-ratios -64.4%)
+   window           -9.9%  (p 0.0117; mean-of-ratios -17.7%)
+   periodic        -43.5%  (p 0.2158; mean-of-ratios +87.8%)
+   by T_c=25%: oracle_time -72.8%, oracle_target -89.3%, periodic -43.0%
+   by T_c=50%: oracle_time -63.6%, oracle_target -84.8%, periodic -44.0%
+   stratum lcbench (5 pairs): oracle_time +16.7%, oracle_target -46.6%, oblivious AUC 0.316
+   stratum tabrepo (5 pairs): oracle_time -83.8%, oracle_target -94.4%, oblivious AUC 1.728
+
+== TH-N0 gate (unrelated x abrupt, oracle_time vs oblivious)
+   effect -80.0%, p 0.0068, strata {'lcbench': np.float64(-0.41360418087070194), 'tabrepo': np.float64(-0.8882369831924621)} -> PASS (threshold -10 %, p < 0.05, both strata negative)
+   passing regimes for N1 (oracle_time >= 10 % below oblivious, p < 0.05, ratio of means):
+      ('related', 'abrupt'): +36.9% p 0.8623 -> fails
+      ('related', 'partial'): +143.3% p 0.9902 -> fails
+      ('unrelated', 'abrupt'): -80.0% p 0.0068 -> passes
+      ('unrelated', 'partial'): -68.2% p 0.0420 -> passes
+
+== False-alarm cost from stationary runs (pilot pairs, 4 seeds)
+   restart50: AUC 0.2319 vs oblivious 0.0753 -> +208.1% (absolute +0.1566); mean restarts 1.00
+   periodic25: AUC 0.4591 vs oblivious 0.0753 -> +509.9% (absolute +0.3838); mean restarts 4.00
+   c_FA (one forced restart at 50 %, relative AUC increase) = 2.081; allowed false-alarm rate = min(10 %, 0.02 / c_FA) = 1.0%  -> detector infeasible (< 2 %)

@@ -1,0 +1,5 @@
+Upper bound if the best entry per landscape were known on the scoring seeds themselves (winner's-curse inflated), vs the default entry, mean over landscapes of relative AUC reduction
+K noise 0%: hindsight-on-scoring-seeds gain +0.133 (default is already optimal on 2/10 landscapes)
+R noise 0%: hindsight-on-scoring-seeds gain +0.061 (default is already optimal on 5/10 landscapes)
+K noise 5%: hindsight-on-scoring-seeds gain +0.066 (default is already optimal on 4/10 landscapes)
+R noise 5%: hindsight-on-scoring-seeds gain +0.086 (default is already optimal on 3/10 landscapes)

@@ -1,0 +1,25 @@
+24 landscapes, 4 seeds each; mean AUC per arm:
+   random    0.1227  vs W1 ratio-of-means +351.9%, mean-of-ratios +4302606353675.7%
+   W1        0.0272  vs W1 ratio-of-means +0.0%, mean-of-ratios -50.0%
+   SP        0.0291  vs W1 ratio-of-means +7.0%, mean-of-ratios -21.8%
+   frozen    0.0281  vs W1 ratio-of-means +3.4%, mean-of-ratios -37.5%
+   uniform   0.0274  vs W1 ratio-of-means +0.7%, mean-of-ratios -35.1%
+   shuffled  0.0314  vs W1 ratio-of-means +15.7%, mean-of-ratios +11.2%
+   permw     0.0280  vs W1 ratio-of-means +3.3%, mean-of-ratios -24.9%
+   sp_c0     0.0281  vs W1 ratio-of-means +3.6%, mean-of-ratios -40.4%
+
+Gates (need effect below -threshold and Holm p < 0.05):
+   TH-L1 SP vs W1: ratio-of-means +7.0% (mean-of-ratios -21.8%), raw p 0.7794, Holm p 1.0000, threshold -5% -> FAIL
+   TH-L2 SP vs SP-uniform: ratio-of-means +6.3% (mean-of-ratios -44.4%), raw p 0.3897, Holm p 1.0000, threshold -2% -> FAIL
+   TH-L3 SP vs SP-frozen: ratio-of-means +3.5% (mean-of-ratios -43.8%), raw p 0.6628, Holm p 1.0000, threshold -2% -> FAIL
+
+SP worse than W1 by >5 % on 25% of landscapes (worst +nan%); better by >5 % on 8%
+
+Controls: SP-shuffled not >2 % better than W1: +15.7% -> OK; SP-permw >=2 % worse than SP: -3.5% -> FAIL
+Sensitivity (not gated): SP c=0 vs W1 +3.6%
+
+W1 failure landscapes on new seeds (W1 > 1.05 x random): 0
+
+SP diagnostics: effective sources 27.6, weight volatility 0.008
+
+Controls FAIL: result not interpretable

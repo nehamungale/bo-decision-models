@@ -1,0 +1,43 @@
+64000 states x 6 AF proposals; base rate proposal beats incumbent 0.065
+
+One-step normalised gain per step, pooled over states (higher is better); reference points:
+   random AF        0.0055
+   oracle (peeks)   0.0182
+   static LogEI     0.0063
+   static LogPI     0.0054
+   static UCB       0.0069
+   static TS        0.0052
+   static PosMean   0.0050
+   static PosSTD    0.0041
+
+(1) Univariate: pick the AF whose proposal has the highest value of one candidate feature (within each state)
+   highest gap       -> gain 0.0050   AF shares {'LogEI': np.float64(0.3), 'LogPI': np.float64(0.27), 'UCB': np.float64(0.03), 'TS': np.float64(0.03), 'PosMean': np.float64(0.38), 'PosSTD': np.float64(0.0)}
+   lowest  gap       -> gain 0.0042   AF shares {'LogEI': np.float64(0.01), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.01), 'TS': np.float64(0.05), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.93)}
+   highest sdn       -> gain 0.0041   AF shares {'LogEI': np.float64(0.02), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.01), 'TS': np.float64(0.01), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.97)}
+   lowest  sdn       -> gain 0.0046   AF shares {'LogEI': np.float64(0.18), 'LogPI': np.float64(0.38), 'UCB': np.float64(0.02), 'TS': np.float64(0.1), 'PosMean': np.float64(0.32), 'PosSTD': np.float64(0.0)}
+   highest z         -> gain 0.0054   AF shares {'LogEI': np.float64(0.42), 'LogPI': np.float64(0.58), 'UCB': np.float64(0.0), 'TS': np.float64(0.0), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.0)}
+   lowest  z         -> gain 0.0041   AF shares {'LogEI': np.float64(0.0), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.01), 'TS': np.float64(0.14), 'PosMean': np.float64(0.08), 'PosSTD': np.float64(0.76)}
+   highest pi        -> gain 0.0054   AF shares {'LogEI': np.float64(0.42), 'LogPI': np.float64(0.58), 'UCB': np.float64(0.0), 'TS': np.float64(0.0), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.0)}
+   lowest  pi        -> gain 0.0041   AF shares {'LogEI': np.float64(0.0), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.01), 'TS': np.float64(0.14), 'PosMean': np.float64(0.08), 'PosSTD': np.float64(0.76)}
+   highest ei        -> gain 0.0063   AF shares {'LogEI': np.float64(1.0), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.0), 'TS': np.float64(0.0), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.0)}
+   lowest  ei        -> gain 0.0040   AF shares {'LogEI': np.float64(0.0), 'LogPI': np.float64(0.02), 'UCB': np.float64(0.01), 'TS': np.float64(0.19), 'PosMean': np.float64(0.15), 'PosSTD': np.float64(0.64)}
+   highest dist_inc  -> gain 0.0033   AF shares {'LogEI': np.float64(0.12), 'LogPI': np.float64(0.03), 'UCB': np.float64(0.08), 'TS': np.float64(0.15), 'PosMean': np.float64(0.01), 'PosSTD': np.float64(0.62)}
+   lowest  dist_inc  -> gain 0.0065   AF shares {'LogEI': np.float64(0.27), 'LogPI': np.float64(0.27), 'UCB': np.float64(0.08), 'TS': np.float64(0.16), 'PosMean': np.float64(0.19), 'PosSTD': np.float64(0.04)}
+   highest dist_nn   -> gain 0.0048   AF shares {'LogEI': np.float64(0.09), 'LogPI': np.float64(0.01), 'UCB': np.float64(0.07), 'TS': np.float64(0.09), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.74)}
+   lowest  dist_nn   -> gain 0.0048   AF shares {'LogEI': np.float64(0.22), 'LogPI': np.float64(0.3), 'UCB': np.float64(0.06), 'TS': np.float64(0.15), 'PosMean': np.float64(0.25), 'PosSTD': np.float64(0.02)}
+   highest mu_rank   -> gain 0.0050   AF shares {'LogEI': np.float64(0.3), 'LogPI': np.float64(0.27), 'UCB': np.float64(0.03), 'TS': np.float64(0.03), 'PosMean': np.float64(0.38), 'PosSTD': np.float64(0.0)}
+   lowest  mu_rank   -> gain 0.0042   AF shares {'LogEI': np.float64(0.01), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.01), 'TS': np.float64(0.05), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.93)}
+   highest sd_rank   -> gain 0.0041   AF shares {'LogEI': np.float64(0.02), 'LogPI': np.float64(0.0), 'UCB': np.float64(0.01), 'TS': np.float64(0.01), 'PosMean': np.float64(0.0), 'PosSTD': np.float64(0.97)}
+   lowest  sd_rank   -> gain 0.0046   AF shares {'LogEI': np.float64(0.18), 'LogPI': np.float64(0.38), 'UCB': np.float64(0.02), 'TS': np.float64(0.1), 'PosMean': np.float64(0.32), 'PosSTD': np.float64(0.0)}
+
+(2) candidate features + AF identity: LODO AUROC (pooled AF rows) 0.700; one-step gain learned 0.0069 | random 0.0055 | static UCB 0.0069 | static LogEI 0.0063 | oracle 0.0182
+     per-dataset learned minus random: [0.0021, 0.001, 0.0024, 0.0017, 0.0008, 0.0014, 0.0011, 0.0009]; learned > random on 8/8 (Wilcoxon p=0.008); vs UCB p=1.000
+     AF shares {'LogEI': np.float64(0.31), 'LogPI': np.float64(0.19), 'UCB': np.float64(0.14), 'TS': np.float64(0.21), 'PosMean': np.float64(0.11), 'PosSTD': np.float64(0.05)}
+
+(2) candidate + AF identity + global state: LODO AUROC (pooled AF rows) 0.690; one-step gain learned 0.0064 | random 0.0055 | static UCB 0.0069 | static LogEI 0.0063 | oracle 0.0182
+     per-dataset learned minus random: [-0.0, 0.0005, 0.0027, 0.001, -0.0003, 0.0016, 0.001, 0.0007]; learned > random on 6/8 (Wilcoxon p=0.039); vs UCB p=0.844
+     AF shares {'LogEI': np.float64(0.31), 'LogPI': np.float64(0.23), 'UCB': np.float64(0.12), 'TS': np.float64(0.19), 'PosMean': np.float64(0.12), 'PosSTD': np.float64(0.04)}
+
+(2) candidate + AF identity + all six proposals' features (context): LODO AUROC (pooled AF rows) 0.700; one-step gain learned 0.0069 | random 0.0055 | static UCB 0.0069 | static LogEI 0.0063 | oracle 0.0182
+     per-dataset learned minus random: [0.0009, 0.0009, 0.0025, 0.0033, 0.0004, 0.0012, 0.0011, 0.001]; learned > random on 8/8 (Wilcoxon p=0.008); vs UCB p=0.844
+     AF shares {'LogEI': np.float64(0.34), 'LogPI': np.float64(0.25), 'UCB': np.float64(0.12), 'TS': np.float64(0.14), 'PosMean': np.float64(0.11), 'PosSTD': np.float64(0.04)}

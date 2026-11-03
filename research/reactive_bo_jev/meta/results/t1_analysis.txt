@@ -1,0 +1,21 @@
+landscape                                      random      W1b      W1a       W0 | start regret rand/W1b | n_train
+lcbench/Amazon_employee_access                 0.1698   0.0088   0.0000   0.0085 | 0.499 / 0.041 | 29
+lcbench/adult                                  0.0960   0.0000   0.0000   0.0094 | 0.379 / 0.000 | 29
+lcbench/bank-marketing                         0.1356   0.0133   0.0000   0.0043 | 0.362 / 0.043 | 29
+lcbench/mfeat-factors                          0.0284   0.0000   0.0000   0.0147 | 0.071 / 0.000 | 29
+lcbench/numerai28.6                            0.2215   0.0067   0.0000   0.2105 | 0.461 / 0.048 | 29
+tabrepo_CatBoost/analcatdata_authorship        0.0123   0.0022   0.0000   0.0202 | 0.255 / 0.055 | 238
+tabrepo_ExtraTrees/APSFailure                  0.0137   0.0069   0.0055   0.0289 | 0.151 / 0.343 | 232
+tabrepo_LightGBM/madeline                      0.0060   0.0011   0.0606   0.0043 | 0.195 / 0.006 | 234
+tabrepo_NeuralNetTorch/kin8nm                  0.0875   0.0000   0.0000   0.0593 | 0.227 / 0.024 | 237
+tabrepo_RandomForest/walking-activity          0.0409   0.0758   0.0921   0.0719 | 0.173 / 0.146 | 221
+
+max AUC range across 3 seeds for W1b: 0.0000
+
+relative AUC-regret reduction vs random start (positive = better); mean of per-landscape ratios | change in mean AUC | wins | Wilcoxon one-sided p
+W1b  ratios +0.711 | mean AUC 0.0812 -> 0.0115 (+0.859) | wins 9/10 | p=0.0068 | by family {'lcbench': 0.964, 'tabrepo': 0.457}
+W1a  ratios -0.273 | mean AUC 0.0812 -> 0.0158 (+0.805) | wins 8/10 | p=0.1777 | by family {'lcbench': 1.0, 'tabrepo': -1.546}
+W0   ratios +0.144 | mean AUC 0.0812 -> 0.0432 (+0.468) | wins 7/10 | p=0.2783 | by family {'lcbench': 0.67, 'tabrepo': -0.382}
+
+T1 stop rule (primary arm W1b): close W if gain < 3% on all families -> CONTINUE {'tabrepo': np.float64(0.45711358531348834), 'lcbench': np.float64(0.9639013501835686)}
+Preview of TH-W (>=10% on >=2 families, p<0.05): on track
