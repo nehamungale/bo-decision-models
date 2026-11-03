@@ -1,0 +1,53 @@
+A2 analysis; test pairs 100, campaigns per cell = pairs x 4 seeds x 2 T_c
+
+TH-A0 (oracle_keep vs refresh, unrelated x abrupt; need <= -10 %, p < .05, both strata < 0): {'gated': (-0.5555830411079227, 1.687538997430238e-14, 50), 'anti': (-0.6066229561402197, 5.960464477539062e-07, 23), 'lowpos': (-0.44849530502938284, 7.450580596923828e-09, 27), 'pass': True}
+
+== post-change AUC ratio of means vs refresh and vs oblivious, by regime (n pairs, p)
+  remeasure_keep       unrxabr: vsRef -39.7% (p 0.000) vsObl -48.7% | unrxpar: vsRef -57.7% (p 0.000) vsObl -55.1% | relxabr: vsRef -37.8% (p 0.000) vsObl -36.0% | relxpar: vsRef -49.2% (p 0.000) vsObl -45.2%
+  random_keep_rm       unrxabr: vsRef -13.1% (p 0.000) vsObl -26.1% | unrxpar: vsRef -18.2% (p 0.000) vsObl -13.1% | relxabr: vsRef -9.2% (p 0.041) vsObl -6.6% | relxpar: vsRef -8.9% (p 0.029) vsObl -1.7%
+  oracle_keep          unrxabr: vsRef -55.6% (p 0.000) vsObl -62.2% | unrxpar: vsRef -70.5% (p 0.000) vsObl -68.6% | relxabr: vsRef -49.7% (p 0.000) vsObl -48.2% | relxpar: vsRef -54.2% (p 0.004) vsObl -50.5%
+  sp_stale_remeasure   unrxabr: vsRef -47.2% (p 0.000) vsObl -55.0% | unrxpar: vsRef -39.5% (p 0.011) vsObl -35.8% | relxabr: vsRef +6.6% (p 1.000) vsObl +9.7% | relxpar: vsRef +69.3% (p 1.000) vsObl +82.7%
+  sp_passive           unrxabr: vsRef -25.2% (p 0.000) vsObl -36.4% | unrxpar: vsRef -25.9% (p 0.013) vsObl -21.3% | relxabr: vsRef +16.7% (p 0.916) vsObl +20.0% | relxpar: vsRef +71.8% (p 0.999) vsObl +85.4%
+  sp_stale_full        unrxabr: vsRef +11.9% (p 0.994) vsObl -4.8% | unrxpar: vsRef -6.9% (p 0.146) vsObl -1.1% | relxabr: vsRef +5.0% (p 0.916) vsObl +8.0% | relxpar: vsRef +16.1% (p 0.909) vsObl +25.3%
+  oracle_time          unrxabr: vsRef -73.0% (p 0.000) vsObl -77.0% | unrxpar: vsRef -55.5% (p 0.003) vsObl -52.8% | relxabr: vsRef -4.3% (p 0.999) vsObl -1.5% | relxpar: vsRef +88.7% (p 1.000) vsObl +103.7%
+  oracle_target        unrxabr: vsRef -84.9% (p 0.000) vsObl -87.2% | unrxpar: vsRef -78.8% (p 0.000) vsObl -77.5% | relxabr: vsRef -69.6% (p 0.000) vsObl -68.7% | relxpar: vsRef -52.1% (p 0.059) vsObl -48.3%
+  refresh              unrxabr: vsRef +0.0% (p 1.000) vsObl -14.9% | unrxpar: vsRef +0.0% (p 1.000) vsObl +6.2% | relxabr: vsRef +0.0% (p 1.000) vsObl +2.9% | relxpar: vsRef +0.0% (p 1.000) vsObl +7.9%
+
+== unrelated x abrupt, split (note: anti-correlated pairs are almost all TabRepo)
+  anti    remeasure_keep   n=23 vs refresh -46.0%
+  anti    oracle_keep      n=23 vs refresh -60.7%
+  anti    sp_stale_full    n=23 vs refresh +12.7%
+  anti    sp_passive       n=23 vs refresh -26.2%
+  lowpos  remeasure_keep   n=27 vs refresh -26.5%
+  lowpos  oracle_keep      n=27 vs refresh -44.8%
+  lowpos  sp_stale_full    n=27 vs refresh +10.0%
+  lowpos  sp_passive       n=27 vs refresh -23.1%
+
+== stationary AUC ratio vs oblivious and vs refresh
+  refresh              vs oblivious +4.5%; trigger share 0.0%; vs refresh +0.0%
+  remeasure_keep       vs oblivious +4.5%; trigger share 0.0%; vs refresh +0.0%
+  random_keep_rm       vs oblivious +7.5%; trigger share 25.0%; vs refresh +2.9%
+  sp_stale_remeasure   vs oblivious +4.5%; trigger share 0.0%; vs refresh +0.0%
+  sp_passive           vs oblivious +172.5%; trigger share 0.0%; vs refresh +160.8%
+  sp_stale_full        vs oblivious +14.0%; trigger share 0.0%; vs refresh +9.1%
+
+== TH-A1 (remeasure_keep vs refresh; gated need <= -5 %, p < .05; related and stationary harm <= +2 %)
+  gated (-0.39739498320970545, 2.8051339029389055e-11, 50)
+  per regime vs refresh: {'unrxabr': '-39.7%', 'unrxpar': '-57.7%', 'relxabr': '-37.8%', 'relxpar': '-49.2%'}
+  stationary vs refresh +0.0%
+  vs matching random control (gated): -30.6% (p 0.000); need <= -2 %
+  share of oracle_keep's gain recovered (gated): 71.5%
+
+== detection (remeasure_keep): trigger share, pre-T_c triggers, delay, gain given trigger vs refresh
+  unrxabr: triggered post-T_c 88.5%, pre-T_c 0.0%, missed 11.5%, mean delay 5.4, delay-window regret 10.92, gain given trigger vs refresh -40.7%
+  unrxpar: triggered post-T_c 94.2%, pre-T_c 0.0%, missed 5.8%, mean delay 5.5, delay-window regret 4.77, gain given trigger vs refresh -58.4%
+  relxabr: triggered post-T_c 74.0%, pre-T_c 0.0%, missed 26.0%, mean delay 5.3, delay-window regret 3.56, gain given trigger vs refresh -39.6%
+  relxpar: triggered post-T_c 77.5%, pre-T_c 0.0%, missed 22.5%, mean delay 5.4, delay-window regret 1.42, gain given trigger vs refresh -52.2%
+
+== TH-A3 and the passive reading (gated; passive arms are untuned designs, 9e)
+  remeasure_keep vs sp_passive: -19.4% (p 0.089), 90 % bootstrap CI [-34.1%, -0.4%]; sp_passive stationary harm vs oblivious +172.5%; per regime {'unrxabr': -0.19408161891371378, 'unrxpar': -0.42950314918127086, 'relxabr': -0.4668686687348981, 'relxpar': -0.7041626867632333}
+  remeasure_keep vs sp_stale_full: -46.1% (p 0.000), 90 % bootstrap CI [-54.1%, -36.0%]; sp_stale_full stationary harm vs oblivious +14.0%; per regime {'unrxabr': -0.4612443192661141, 'unrxpar': -0.545705854926049, 'relxabr': -0.40751239596524225, 'relxpar': -0.5623644220728394}
+  better passive arm (lower gated post-change AUC): sp_passive; A3 FAIL; 'passive suffices' needs CI inside +-2 % (False) and passive stationary harm <= 2 % (False)
+  Holm (m = 4, A2 equivalence test entered as p = 1): A0 0.000, A1 0.000, A3 0.178
+
+Summary: A0 PASS; A1 PASS

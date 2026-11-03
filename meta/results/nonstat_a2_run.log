@@ -1,0 +1,37 @@
+  active 100/1200 679s
+  active 200/1200 1213s
+  active 300/1200 1809s
+  active 400/1200 2359s
+  active 500/1200 2918s
+  active 600/1200 3427s
+  active 700/1200 4001s
+  active 800/1200 4526s
+  active 900/1200 4911s
+  active 1000/1200 5275s
+  active 1100/1200 5649s
+  active 1200/1200 5988s
+active done 1200 units 5989s
+TH-A0: {'gated': (-0.5555830411079227, 1.687538997430238e-14, 50), 'anti': (-0.6066229561402197, 5.960464477539062e-07, 23), 'lowpos': (-0.44849530502938284, 7.450580596923828e-09, 27), 'pass': True}
+  passive 100/1200 406s
+  passive 200/1200 789s
+  passive 300/1200 1169s
+  passive 400/1200 1547s
+  passive 500/1200 1914s
+  passive 600/1200 2304s
+  passive 700/1200 2663s
+  passive 800/1200 3046s
+  passive 900/1200 3253s
+  passive 1000/1200 3447s
+  passive 1100/1200 3654s
+  passive 1200/1200 3850s
+passive done 1200 units 3851s
+  ref 100/800 215s
+  ref 200/800 413s
+  ref 300/800 603s
+  ref 400/800 800s
+  ref 500/800 999s
+  ref 600/800 1189s
+  ref 700/800 1386s
+  ref 800/800 1570s
+ref done 800 units 1571s
+A2 complete

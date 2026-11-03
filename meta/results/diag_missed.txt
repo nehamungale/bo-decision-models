@@ -1,0 +1,9 @@
+missed campaigns (remeasure_keep never triggered; all pairs and regimes): 263 of 1600
+  no post-T_c re-measurement at all: 0
+  every post-T_c re-measurement had y_A(x*) == y_B(x*) (incumbent unaffected by the change): 47
+  mixed (some identical, some already-fresh incumbents): 3
+  incumbent differed under the two objectives but the stored value was already post-change (incumbent measured after T_c): 213
+  on the missed campaigns: oracle_keep post-change AUC vs refresh +49.8%; mean AUC refresh 0.0837, oracle_keep 0.1254, oblivious 0.1301
+  on triggered campaigns: oracle_keep vs refresh -62.2%
+  missed campaigns where oracle_keep is better than refresh by > 0.01 AUC: 56 of 263
+  headroom if a perfect detector chose keep/no-keep per missed campaign: removes 0.9% of remeasure_keep's total post-change AUC mass (all regimes); remeasure_keep is -45.8% vs refresh overall

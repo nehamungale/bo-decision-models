@@ -1,0 +1,102 @@
+  s1a 40/320 183s
+  s1a 80/320 310s
+  s1a 120/320 445s
+  s1a 160/320 569s
+  s1a 200/320 713s
+  s1a 240/320 874s
+  s1a 280/320 1003s
+  s1a 320/320 1122s
+s1a done 320 units 1123s
+  s1as 40/160 107s
+  s1as 80/160 181s
+  s1as 120/160 280s
+  s1as 160/160 344s
+s1as done 160 units 345s
+S1a keep variance (J = pooled post-change ratio of oracle_keep vs oblivious + stationary forced_keep cost): {0.01: -0.4513, 0.1: -0.449, 0.3: -0.3337} -> v* = 0.01
+   v=0.01: oracle_keep post -56.6%, forced_keep stationary +11.4%
+   v=0.1: oracle_keep post -58.3%, forced_keep stationary +13.4%
+   v=0.3: oracle_keep post -60.1%, forced_keep stationary +26.7%
+   c_FA(keep) = 0.114; FA budget = 10.0%
+  s1b 40/480 308s
+  s1b 80/480 496s
+  s1b 120/480 728s
+  s1b 160/480 913s
+  s1b 200/480 1158s
+  s1b 240/480 1400s
+  s1b 280/480 1618s
+  s1b 320/480 1807s
+  s1b 360/480 1969s
+  s1b 400/480 2090s
+  s1b 440/480 2278s
+  s1b 480/480 2378s
+s1b done 480 units 2378s
+
+S1b interval r (J = pooled post-change ratio + stationary ratio of remeasure_keep vs oblivious): {5: -0.4046, 10: -0.429, 20: -0.3271} -> r* = 10
+   r=5: refresh post -5.5% (stationary +9.1%); remeasure_keep post -49.5% (stationary +9.1%); triggers {'unrelatedxabrupt': 0.9, 'unrelatedxpartial': 0.95625, 'relatedxabrupt': 0.74375, 'relatedxpartial': 0.825}
+   r=10: refresh post +14.5% (stationary +3.3%); remeasure_keep post -46.2% (stationary +3.3%); triggers {'unrelatedxabrupt': 0.8375, 'unrelatedxpartial': 0.93125, 'relatedxabrupt': 0.70625, 'relatedxpartial': 0.79375}
+   r=20: refresh post +35.2% (stationary +1.0%); remeasure_keep post -33.7% (stationary +1.0%); triggers {'unrelatedxabrupt': 0.8125, 'unrelatedxpartial': 0.9, 'relatedxabrupt': 0.6625, 'relatedxpartial': 0.7625}
+   remeasure_keep r*=10 stationary false-alarm rate: 0.0
+   early A0 check, unrelated x abrupt: oracle_keep(v*) vs refresh(r*) -53.6% (stop if above -5 %)
+  s2 40/480 203s
+  s2 80/480 370s
+  s2 120/480 532s
+  s2 160/480 702s
+  s2 200/480 846s
+  s2 240/480 1045s
+  s2 280/480 1175s
+  s2 320/480 1316s
+  s2 360/480 1441s
+  s2 400/480 1525s
+  s2 440/480 1633s
+  s2 480/480 1714s
+s2 done 480 units 1714s
+  s2s 40/160 31s
+  s2s 80/160 51s
+  s2s 120/160 76s
+  s2s 160/160 94s
+s2s done 160 units 95s
+
+S2 c_FA(spstale) = +1.392
+   h=2.0: stationary FA 100.0%, post-change vs refresh -10.9%, pre-T_c triggers 79.1%, mean delay 1.7313432835820894, change triggers {'unrelatedxabrupt': 1.0, 'unrelatedxpartial': 1.0, 'relatedxabrupt': 1.0, 'relatedxpartial': 1.0}
+   h=4.0: stationary FA 93.8%, post-change vs refresh -14.1%, pre-T_c triggers 62.8%, mean delay 3.1319148936170214, change triggers {'unrelatedxabrupt': 1.0, 'unrelatedxpartial': 0.99375, 'relatedxabrupt': 0.99375, 'relatedxpartial': 0.99375}
+   h=8.0: stationary FA 78.1%, post-change vs refresh -20.4%, pre-T_c triggers 40.9%, mean delay 4.4645892351274785, change triggers {'unrelatedxabrupt': 0.99375, 'unrelatedxpartial': 0.975, 'relatedxabrupt': 0.95625, 'relatedxpartial': 0.91875}
+   h=16.0: stationary FA 50.6%, post-change vs refresh -24.9%, pre-T_c triggers 18.8%, mean delay 6.544080604534005, change triggers {'unrelatedxabrupt': 0.89375, 'unrelatedxpartial': 0.79375, 'relatedxabrupt': 0.80625, 'relatedxpartial': 0.7375}
+   h=32.0: stationary FA 16.2%, post-change vs refresh -21.3%, pre-T_c triggers 5.6%, mean delay 9.853820598006644, change triggers {'unrelatedxabrupt': 0.6125, 'unrelatedxpartial': 0.525, 'relatedxabrupt': 0.53125, 'relatedxpartial': 0.4375}
+   h* = None (no h meets the FA budget: cusum_keep infeasible)
+  s3a 40/480 207s
+  s3a 80/480 349s
+  s3a 120/480 503s
+  s3a 160/480 642s
+  s3a 200/480 808s
+  s3a 240/480 976s
+  s3a 280/480 1127s
+  s3a 320/480 1267s
+  s3a 360/480 1360s
+  s3a 400/480 1444s
+  s3a 440/480 1549s
+  s3a 480/480 1628s
+s3a done 480 units 1629s
+
+S3 sp_passive stationary harm vs oblivious +140.0%; post-change vs oblivious -18.6%  [FLAG: above 5 %]
+   remeasure_keep: post-change vs refresh -46.8%, stationary vs refresh +0.0%, stationary FA 0.0, pre-T_c triggers 0.0%, delay 5.376673040152964, change triggers {'unrelatedxabrupt': 0.8375, 'relatedxabrupt': 0.70625, 'unrelatedxpartial': 0.93125, 'relatedxpartial': 0.79375}
+   sp_stale_remeasure: post-change vs refresh -21.2%, stationary vs refresh +0.0%, stationary FA 0.0, pre-T_c triggers 0.0%, delay 5.376673040152964, change triggers {'unrelatedxabrupt': 0.8375, 'relatedxabrupt': 0.70625, 'unrelatedxpartial': 0.93125, 'relatedxpartial': 0.79375}
+   frozen detector: remeasure_keep
+   control rates: q(remeasure_keep) 0.409 -> per step 0.0082; q(cusum_keep) 0.000 -> 0.0000
+  s3b 40/480 70s
+  s3b 80/480 106s
+  s3b 120/480 131s
+  s3b 160/480 154s
+  s3b 200/480 212s
+  s3b 240/480 258s
+  s3b 280/480 308s
+  s3b 320/480 344s
+  s3b 360/480 378s
+  s3b 400/480 388s
+  s3b 440/480 428s
+  s3b 480/480 449s
+s3b done 480 units 450s
+
+   frozen detector remeasure_keep vs matching random control random_keep_rm: post-change -45.4% (stop if above -2 %)
+   random_keep_rm: post vs refresh -3.2%, stationary vs refresh -0.6%
+
+A1 complete. Manifest: {'v_star': 0.01, 'r_star': 10, 'detector': 'remeasure_keep', 'h_star': None, 'q_remeasure': 0.40859375, 'q_cusum': 0.0, 'rate_rm': 0.008171875, 'rate_cu': 0.0}
