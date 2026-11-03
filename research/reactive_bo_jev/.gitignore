@@ -1,0 +1,5 @@
+# bulky, regenerable outputs (see notes.md for how to rebuild)
+**/*.pkl
+**/*.npz
+**/*.tmp
+meta/pools/*.npz

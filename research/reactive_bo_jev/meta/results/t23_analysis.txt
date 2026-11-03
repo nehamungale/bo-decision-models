@@ -1,0 +1,60 @@
+
+=== K menu, noise 0% (entries K:rbf_ard, K:matern52_ard, K:rbf_iso, K:rf) ===
+landscape                                    rbf_ard matern52_ard   rbf_iso        rf  | A-best  B(A-best) B(fixed)  B(default)
+hpob_5891/3950                                0.0052    0.0052    0.0054    0.0039  |       rf    0.0039    0.0052     0.0052
+hpob_5971/145677                              0.0323    0.0369    0.0546    0.0672  |  rbf_ard    0.0323    0.0323     0.0323
+hpob_5971/219                                 0.0148    0.0178    0.0144    0.0294  |  rbf_iso    0.0144    0.0148     0.0148
+hpob_7609/145972                              0.1532    0.1330    0.1285    0.1384  |       rf    0.1384    0.1532     0.1532
+lcbench/Amazon_employee_access                0.1698    0.1874    0.1804    0.1913  | matern52_ard    0.1874    0.1698     0.1698
+lcbench/mfeat-factors                         0.0284    0.0223    0.0288    0.0307  |  rbf_ard    0.0284    0.0284     0.0284
+lcbench/numerai28.6                           0.2215    0.2018    0.2463    0.2262  |       rf    0.2262    0.2215     0.2215
+tabrepo_LightGBM/madeline                     0.0060    0.0046    0.0074    0.0128  |  rbf_ard    0.0060    0.0060     0.0060
+tabrepo_NeuralNetTorch/kin8nm                 0.0875    0.0704    0.0816    0.1059  |       rf    0.1059    0.0875     0.0875
+tabrepo_RandomForest/walking-activity         0.0409    0.0339    0.0398    0.0575  |  rbf_ard    0.0409    0.0409     0.0409
+hindsight(A->B) vs best fixed: mean gain +0.003, wins 3/10, p=0.5000, by family {'hpob': 0.09, 'lcbench': -0.041, 'tabrepo': -0.07}; fixed entry chosen across folds {'K:rbf_ard': 10}; mean B AUC default 0.0760 vs fixed-chosen 0.0760
+TH-K (noise 0%): FAIL
+
+=== R menu, noise 0% (entries K:rbf_ard, R:0.15, R:0.30, R:adaptive) ===
+landscape                                    rbf_ard      0.15      0.30  adaptive  | A-best  B(A-best) B(fixed)  B(default)
+hpob_5891/3950                                0.0052    0.0105    0.0103    0.0102  |  rbf_ard    0.0052    0.0052     0.0052
+hpob_5971/145677                              0.0323    0.0412    0.0443    0.0404  | adaptive    0.0404    0.0323     0.0323
+hpob_5971/219                                 0.0148    0.0203    0.0329    0.0208  |     0.15    0.0203    0.0148     0.0148
+hpob_7609/145972                              0.1532    0.1380    0.1137    0.1302  |     0.30    0.1137    0.1532     0.1532
+lcbench/Amazon_employee_access                0.1698    0.1470    0.2867    0.1695  |  rbf_ard    0.1698    0.1698     0.1698
+lcbench/mfeat-factors                         0.0284    0.0290    0.0277    0.0289  |     0.15    0.0290    0.0284     0.0284
+lcbench/numerai28.6                           0.2215    0.2031    0.2823    0.2377  | adaptive    0.2377    0.2215     0.2215
+tabrepo_LightGBM/madeline                     0.0060    0.0098    0.0086    0.0061  | adaptive    0.0061    0.0060     0.0060
+tabrepo_NeuralNetTorch/kin8nm                 0.0875    0.0875    0.0863    0.0782  | adaptive    0.0782    0.0875     0.0875
+tabrepo_RandomForest/walking-activity         0.0409    0.0531    0.0694    0.0426  |  rbf_ard    0.0409    0.0409     0.0409
+hindsight(A->B) vs best fixed: mean gain -0.037, wins 2/10, p=0.7656, by family {'hpob': -0.091, 'lcbench': -0.031, 'tabrepo': 0.031}; fixed entry chosen across folds {'K:rbf_ard': 10}; mean B AUC default 0.0760 vs fixed-chosen 0.0760
+TH-R (noise 0%): FAIL
+
+=== K menu, noise 5% (entries K:rbf_ard, K:matern52_ard, K:rbf_iso, K:rf) ===
+landscape                                    rbf_ard matern52_ard   rbf_iso        rf  | A-best  B(A-best) B(fixed)  B(default)
+hpob_5891/3950                                0.0133    0.0123    0.0122    0.0134  |  rbf_ard    0.0133    0.0123     0.0133
+hpob_5971/145677                              0.0530    0.0536    0.0647    0.0880  | matern52_ard    0.0536    0.0530     0.0530
+hpob_5971/219                                 0.0492    0.0510    0.0437    0.0441  | matern52_ard    0.0510    0.0492     0.0492
+hpob_7609/145972                              0.1382    0.1466    0.1460    0.1634  |       rf    0.1634    0.1466     0.1382
+lcbench/Amazon_employee_access                0.1316    0.1554    0.1959    0.2444  | matern52_ard    0.1554    0.1316     0.1316
+lcbench/mfeat-factors                         0.0501    0.0548    0.0473    0.0642  |  rbf_iso    0.0473    0.0548     0.0501
+lcbench/numerai28.6                           0.2114    0.2445    0.2701    0.2584  |       rf    0.2584    0.2445     0.2114
+tabrepo_LightGBM/madeline                     0.0322    0.0317    0.0316    0.0366  | matern52_ard    0.0317    0.0322     0.0322
+tabrepo_NeuralNetTorch/kin8nm                 0.1047    0.0946    0.0860    0.1281  |  rbf_ard    0.1047    0.0946     0.1047
+tabrepo_RandomForest/walking-activity         0.0553    0.0437    0.0549    0.0599  |  rbf_ard    0.0553    0.0437     0.0553
+hindsight(A->B) vs best fixed: mean gain -0.070, wins 2/10, p=0.9678, by family {'hpob': -0.06, 'lcbench': -0.033, 'tabrepo': -0.119}; fixed entry chosen across folds {'K:matern52_ard': 6, 'K:rbf_ard': 4}; mean B AUC default 0.0839 vs fixed-chosen 0.0863
+TH-K (noise 5%): FAIL
+
+=== R menu, noise 5% (entries K:rbf_ard, R:0.15, R:0.30, R:adaptive) ===
+landscape                                    rbf_ard      0.15      0.30  adaptive  | A-best  B(A-best) B(fixed)  B(default)
+hpob_5891/3950                                0.0133    0.0115    0.0118    0.0128  |  rbf_ard    0.0133    0.0128     0.0133
+hpob_5971/145677                              0.0530    0.0545    0.0478    0.0436  |     0.30    0.0478    0.0530     0.0530
+hpob_5971/219                                 0.0492    0.0398    0.0559    0.0493  |     0.15    0.0398    0.0492     0.0492
+hpob_7609/145972                              0.1382    0.1539    0.1283    0.1562  |     0.30    0.1283    0.1562     0.1382
+lcbench/Amazon_employee_access                0.1316    0.1942    0.2774    0.1826  | adaptive    0.1826    0.1316     0.1316
+lcbench/mfeat-factors                         0.0501    0.0507    0.0640    0.0626  |     0.30    0.0640    0.0501     0.0501
+lcbench/numerai28.6                           0.2114    0.2524    0.2902    0.2611  | adaptive    0.2611    0.2114     0.2114
+tabrepo_LightGBM/madeline                     0.0322    0.0367    0.0360    0.0317  | adaptive    0.0317    0.0322     0.0322
+tabrepo_NeuralNetTorch/kin8nm                 0.1047    0.1047    0.1274    0.0969  |  rbf_ard    0.1047    0.0969     0.1047
+tabrepo_RandomForest/walking-activity         0.0553    0.0570    0.0556    0.0447  |  rbf_ard    0.0553    0.0447     0.0553
+hindsight(A->B) vs best fixed: mean gain -0.078, wins 4/10, p=0.8838, by family {'hpob': 0.107, 'lcbench': -0.3, 'tabrepo': -0.101}; fixed entry chosen across folds {'R:adaptive': 4, 'K:rbf_ard': 6}; mean B AUC default 0.0839 vs fixed-chosen 0.0838
+TH-R (noise 5%): FAIL

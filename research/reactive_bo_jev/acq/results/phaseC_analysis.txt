@@ -1,0 +1,38 @@
+modes ['typed_tev1_argmax', 'typed_tev1_gated', 'typed_tev1_sample'] complete seeds [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+dataset                      LogEI       LogPI          TS      random        rule  learned_L2  llm_gptoss tev1_argmax  tev1_gated tev1_sample
+numerai28.6                  0.296       0.319       0.226       0.278       0.258       0.232       0.276       0.319       0.296       0.211
+KDDCup09_appetency           0.082       0.065       0.085       0.073       0.081       0.087       0.069       0.065       0.082       0.072
+albert                       0.059       0.057       0.065       0.067       0.061       0.080       0.079       0.057       0.059       0.070
+helena                       0.054       0.055       0.066       0.050       0.046       0.048       0.033       0.055       0.054       0.043
+vehicle                      0.022       0.023       0.012       0.018       0.027       0.028       0.017       0.023       0.022       0.020
+sylvine                      0.047       0.031       0.060       0.047       0.040       0.039       0.055       0.031       0.047       0.057
+kc1                          0.464       0.451       0.387       0.467       0.444       0.402       0.446       0.451       0.464       0.389
+christine                    0.176       0.143       0.187       0.161       0.162       0.170       0.192       0.143       0.176       0.175
+MEAN                        0.1500      0.1431      0.1358      0.1451      0.1397      0.1358      0.1457      0.1431      0.1500      0.1297
+
+== H2 PRIMARY: vs tuned rule (negative = tev1 better; Holm over three modes) ==
+  typed_tev1_argmax        -3.7% | better on 5/8 | p=0.742 Holm 1.000 | 95% CI [-10.9%, +23.6%] -> equivalence not shown
+  typed_tev1_gated         +5.5% | better on 2/8 | p=0.055 Holm 0.164 | 95% CI [-6.5%, +26.8%] -> equivalence not shown
+  typed_tev1_sample        -0.9% | better on 5/8 | p=0.742 Holm 1.000 | 95% CI [-27.3%, +10.6%] -> equivalence not shown
+
+== vs best static TS (negative = tev1 better; Holm over three modes) ==
+  typed_tev1_argmax        +3.8% | better on 5/8 | p=0.945 Holm 1.000 | 95% CI [-17.9%, +39.5%] -> equivalence not shown
+  typed_tev1_gated        +10.2% | better on 5/8 | p=1.000 Holm 1.000 | 95% CI [-9.3%, +41.1%] -> equivalence not shown
+  typed_tev1_sample        +1.7% | better on 5/8 | p=0.195 Holm 0.586 | 95% CI [-21.4%, +12.4%] -> equivalence not shown
+
+== vs random-AF (negative = tev1 better; Holm over three modes) ==
+  typed_tev1_argmax        -3.1% | better on 5/8 | p=0.383 Holm 0.766 | 95% CI [-14.3%, +17.6%] -> equivalence not shown
+  typed_tev1_gated         +5.5% | better on 2/8 | p=0.148 Holm 0.445 | 95% CI [-12.1%, +20.8%] -> equivalence not shown
+  typed_tev1_sample        -1.4% | better on 4/8 | p=0.844 Holm 0.844 | 95% CI [-33.6%, +6.6%] -> equivalence not shown
+
+== vs LLM gpt-oss (negative = tev1 better; Holm over three modes) ==
+  typed_tev1_argmax        +1.8% | better on 4/8 | p=0.945 Holm 1.000 | 95% CI [-17.9%, +16.6%] -> equivalence not shown
+  typed_tev1_gated         +9.4% | better on 3/8 | p=0.461 Holm 1.000 | 95% CI [-10.9%, +20.4%] -> equivalence not shown
+  typed_tev1_sample        +0.1% | better on 4/8 | p=0.383 Holm 1.000 | 95% CI [-31.5%, +4.2%] -> equivalence not shown
+
+== H4: calibration of the model's probabilities (all calls, all modes) ==
+12000 calls; base rate that an AF's proposal beats the incumbent: 0.061
+AUROC of p_a for 'a's proposal beats incumbent': 0.483
+per-AF AUROC: {'LogEI': 0.558, 'LogPI': 0.462, 'UCB': 0.49, 'TS': 0.468, 'PosMean': 0.539, 'PosSTD': 0.331}
+per-AF mean p vs observed rate: {'LogEI': (np.float64(0.106), np.float64(0.071)), 'LogPI': (np.float64(0.395), np.float64(0.081)), 'UCB': (np.float64(0.14), np.float64(0.063)), 'TS': (np.float64(0.142), np.float64(0.047)), 'PosMean': (np.float64(0.042), np.float64(0.073)), 'PosSTD': (np.float64(0.175), np.float64(0.03))}
+confidence vs (chosen AF improved): spearman = -0.027 (n=12000)

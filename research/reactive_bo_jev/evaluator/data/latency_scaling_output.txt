@@ -1,0 +1,7 @@
+H4: latency by number of questions (median / p95 seconds over states)
+  1 questions: median 0.056  p95 0.081
+  2 questions: median 0.080  p95 0.119
+  4 questions: median 0.129  p95 0.166
+  8 questions: median 0.257  p95 0.290
+H5: will_finish_top10 alone vs inside the 8-question bundle
+  mean |diff| 0.0000, mean diff +0.0000, max |diff| 0.000

@@ -1,0 +1,67 @@
+  n1a 40/320 181s
+  n1a 80/320 302s
+  n1a 120/320 444s
+  n1a 160/320 579s
+  n1a 200/320 736s
+  n1a 240/320 851s
+  n1a 280/320 995s
+  n1a 320/320 1122s
+n1a done 320 units 1123s
+  n1as 40/160 104s
+  n1as 80/160 184s
+  n1as 120/160 269s
+  n1as 160/160 336s
+n1as done 160 units 337s
+N1a keep variance under 5 % noise: {0.01: -0.3641, 0.1: -0.3227, 0.3: -0.3022} -> v* = 0.01
+   v=0.01: oracle_keep post -54.4%, forced_keep stationary +18.0%
+   v=0.1: oracle_keep post -55.7%, forced_keep stationary +23.4%
+   v=0.3: oracle_keep post -59.6%, forced_keep stationary +29.4%
+   c_FA(keep, noise) = 0.180; FA budget = 10.0%
+  n1b 40/480 771s
+  n1b 80/480 1253s
+  n1b 120/480 1805s
+  n1b 160/480 2309s
+  n1b 200/480 2902s
+  n1b 240/480 3400s
+  n1b 280/480 3977s
+  n1b 320/480 4450s
+  n1b 360/480 4788s
+  n1b 400/480 5113s
+  n1b 440/480 5493s
+  n1b 480/480 5778s
+n1b done 480 units 5779s
+   r=5 m=1: J -0.227  post vs obl -31.3%  stat vs obl +8.6%  stationary FA 92.5%  change triggers {'relatedxabrupt': 0.99, 'unrelatedxpartial': 0.99, 'unrelatedxabrupt': 0.98, 'relatedxpartial': 0.97}  pre-Tc 53.1%  delay 4.865051903114187
+   r=5 m=2: J -0.385  post vs obl -45.9%  stat vs obl +7.4%  stationary FA 34.4%  change triggers {'relatedxabrupt': 0.79, 'unrelatedxpartial': 0.93, 'unrelatedxabrupt': 0.91, 'relatedxpartial': 0.69}  pre-Tc 3.4%  delay 5.300589390962672
+   r=5 m=3: J -0.369  post vs obl -45.2%  stat vs obl +8.3%  stationary FA 0.0%  change triggers {'relatedxabrupt': 0.57, 'unrelatedxpartial': 0.9, 'unrelatedxabrupt': 0.88, 'relatedxpartial': 0.52}  pre-Tc 0.0%  delay 4.213507625272332
+   r=5 m=4: J -0.358  post vs obl -44.1%  stat vs obl +8.3%  stationary FA 0.0%  change triggers {'relatedxabrupt': 0.54, 'unrelatedxpartial': 0.88, 'unrelatedxabrupt': 0.87, 'relatedxpartial': 0.42}  pre-Tc 0.0%  delay 4.261574074074074
+   r=10 m=1: J -0.291  post vs obl -35.6%  stat vs obl +6.5%  stationary FA 93.1%  change triggers {'relatedxabrupt': 0.99, 'unrelatedxpartial': 0.99, 'unrelatedxabrupt': 0.99, 'relatedxpartial': 0.98}  pre-Tc 43.4%  delay 8.72394366197183
+   r=10 m=2: J -0.344  post vs obl -42.4%  stat vs obl +8.0%  stationary FA 23.8%  change triggers {'relatedxabrupt': 0.74, 'unrelatedxpartial': 0.91, 'unrelatedxabrupt': 0.84, 'relatedxpartial': 0.66}  pre-Tc 4.4%  delay 7.09853249475891
+   r=10 m=3: J -0.348  post vs obl -42.1%  stat vs obl +7.3%  stationary FA 3.8%  change triggers {'relatedxabrupt': 0.57, 'unrelatedxpartial': 0.88, 'unrelatedxabrupt': 0.82, 'relatedxpartial': 0.51}  pre-Tc 0.0%  delay 7.134529147982063
+   r=10 m=4: J -0.330  post vs obl -40.6%  stat vs obl +7.6%  stationary FA 0.0%  change triggers {'relatedxabrupt': 0.52, 'unrelatedxpartial': 0.84, 'unrelatedxabrupt': 0.8, 'relatedxpartial': 0.42}  pre-Tc 0.0%  delay 7.193704600484262
+   r=20 m=1: J -0.254  post vs obl -29.3%  stat vs obl +4.0%  stationary FA 56.9%  change triggers {'relatedxabrupt': 0.8, 'unrelatedxpartial': 0.96, 'unrelatedxabrupt': 0.88, 'relatedxpartial': 0.82}  pre-Tc 16.2%  delay 11.257777777777777
+   r=20 m=2: J -0.272  post vs obl -30.5%  stat vs obl +3.3%  stationary FA 12.5%  change triggers {'relatedxabrupt': 0.55, 'unrelatedxpartial': 0.89, 'unrelatedxabrupt': 0.75, 'relatedxpartial': 0.57}  pre-Tc 0.3%  delay 11.011363636363637
+   r=20 m=3: J -0.270  post vs obl -29.9%  stat vs obl +2.8%  stationary FA 0.6%  change triggers {'relatedxabrupt': 0.47, 'unrelatedxpartial': 0.85, 'unrelatedxabrupt': 0.69, 'relatedxpartial': 0.49}  pre-Tc 0.0%  delay 10.7575
+   r=20 m=4: J -0.250  post vs obl -27.8%  stat vs obl +2.8%  stationary FA 0.0%  change triggers {'relatedxabrupt': 0.43, 'unrelatedxpartial': 0.81, 'unrelatedxabrupt': 0.68, 'relatedxpartial': 0.38}  pre-Tc 0.0%  delay 10.815217391304348
+   refresh r=5: post vs oblivious -12.3%, stationary +8.3%
+   refresh r=10: post vs oblivious -0.7%, stationary +7.6%
+   refresh r=20: post vs oblivious +12.2%, stationary +2.8%
+   replicate effect (exploratory) r=10: refresh_rep vs refresh post-change +30.6%, stationary -5.7%
+   frozen cell: r* = 5, m* = 3 (feasible cells [(-0.369, (5, 3)), (-0.358, (5, 4)), (-0.348, (10, 3)), (-0.33, (10, 4)), (-0.27, (20, 3)), (-0.25, (20, 4))])
+   oracle_keep(v*) vs refresh(r*) gated: -42.6% (stop if above -5 %)
+   control rate: q = 0.359 -> per step 0.00717
+  n1c 40/480 57s
+  n1c 80/480 90s
+  n1c 120/480 138s
+  n1c 160/480 171s
+  n1c 200/480 222s
+  n1c 240/480 256s
+  n1c 280/480 299s
+  n1c 320/480 335s
+  n1c 360/480 363s
+  n1c 400/480 387s
+  n1c 440/480 411s
+  n1c 480/480 434s
+n1c done 480 units 435s
+   frozen detector vs matching random control: post-change -33.8% (stop if above -2 %); frozen vs refresh -33.8%, stationary vs refresh +0.0%
+
+N1 complete. Manifest: {'v_star': 0.01, 'r_star': 5, 'm_star': 3, 'rate_rm': 0.007171875000000001}

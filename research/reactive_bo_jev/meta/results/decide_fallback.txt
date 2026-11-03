@@ -1,0 +1,20 @@
+
+=== noise 0%: always-W1 0.0329, random 0.0535, hindsight 0.0247, failures 33/150 ===
+SRC logreg CV-by-dataset: realised 0.0329 (+0.0% vs always-W1) | shuffled 0.0329 | fall-backs   0 | p=1.000 | FAIL
+SRC logreg CV-by-family : realised 0.0329 (+0.0% vs always-W1) | shuffled 0.0378 | fall-backs   0 | p=1.000 | FAIL
+SRC gbm    CV-by-dataset: realised 0.0317 (+3.6% vs always-W1) | shuffled 0.0349 | fall-backs  16 | p=0.378 | FAIL
+SRC gbm    CV-by-family : realised 0.0331 (-0.6% vs always-W1) | shuffled 0.0363 | fall-backs  41 | p=0.991 | FAIL
+TRG logreg CV-by-dataset: realised 0.0328 (+0.4% vs always-W1) | shuffled 0.0328 | fall-backs  15 | p=0.675 | FAIL
+TRG logreg CV-by-family : realised 0.0333 (-1.2% vs always-W1) | shuffled 0.0327 | fall-backs  10 | p=0.834 | FAIL
+TRG gbm    CV-by-dataset: realised 0.0347 (-5.3% vs always-W1) | shuffled 0.0348 | fall-backs  32 | p=0.982 | FAIL
+TRG gbm    CV-by-family : realised 0.0338 (-2.6% vs always-W1) | shuffled 0.0361 | fall-backs  25 | p=0.925 | FAIL
+ALL logreg CV-by-dataset: realised 0.0323 (+1.9% vs always-W1) | shuffled 0.0334 | fall-backs  14 | p=0.462 | FAIL
+ALL logreg CV-by-family : realised 0.0329 (+0.1% vs always-W1) | shuffled 0.0413 | fall-backs  12 | p=0.681 | FAIL
+ALL gbm    CV-by-dataset: realised 0.0363 (-10.4% vs always-W1) | shuffled 0.0348 | fall-backs  23 | p=0.997 | FAIL
+ALL gbm    CV-by-family : realised 0.0331 (-0.6% vs always-W1) | shuffled 0.0350 | fall-backs  27 | p=0.880 | FAIL
+
+=== noise 5%: always-W1 0.0505, random 0.0657, hindsight 0.0400, failures 45/150 ===
+SRC logreg CV-by-dataset: realised 0.0507 (-0.4% vs always-W1) | shuffled 0.0505 | fall-backs   2 | p=0.910 | FAIL
+SRC logreg CV-by-family : realised 0.0612 (-21.3% vs always-W1) | shuffled 0.0548 | fall-backs  30 | p=1.000 | FAIL
+SRC gbm    CV-by-dataset: realised 0.0492 (+2.7% vs always-W1) | shuffled 0.0527 | fall-backs  23 | p=0.776 | FAIL
+SRC gbm    CV-by-family : realised 0.0542 (-7.3% vs always-W1) | shuffled 0.0548 | fall-backs  32 | p=1.000 | FAIL

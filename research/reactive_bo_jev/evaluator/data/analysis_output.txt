@@ -1,0 +1,37 @@
+6000 states, 8 datasets, base rate 0.105
+
+== Per-dataset AUROC, mean over datasets (leave-one-dataset-out), by epoch ==
+epoch all {'A code': np.float64(0.871), 'B model': np.float64(0.843), 'C code+model': np.float64(0.87), 'D will_top10 raw': np.float64(0.77), 'E peer pct': np.float64(0.86)}
+epoch 5 {'A code': np.float64(0.812), 'B model': np.float64(0.78), 'C code+model': np.float64(0.815), 'D will_top10 raw': np.float64(0.73), 'E peer pct': np.float64(0.802)}
+epoch 10 {'A code': np.float64(0.834), 'B model': np.float64(0.817), 'C code+model': np.float64(0.829), 'D will_top10 raw': np.float64(0.745), 'E peer pct': np.float64(0.836)}
+epoch 25 {'A code': np.float64(0.941), 'B model': np.float64(0.922), 'C code+model': np.float64(0.941), 'D will_top10 raw': np.float64(0.856), 'E peer pct': np.float64(0.942)}
+
+== H1: will_finish_top10 AUROC vs 0.5 (per dataset, pooled epochs) ==
+{'KDDCup09_appetency': 0.791, 'albert': 0.852, 'christine': 0.613, 'helena': 0.895, 'kc1': 0.621, 'numerai28.6': 0.59, 'sylvine': 0.884, 'vehicle': 0.917}
+Wilcoxon vs 0.5 p = 0.0078
+
+== H2: incremental value, C minus A, per-dataset AUROC difference ==
+epoch all mean diff -0.0004, datasets C>A 4/8, Wilcoxon p=0.844
+epoch 5 mean diff +0.0026, datasets C>A 4/8, Wilcoxon p=0.742
+epoch 10 mean diff -0.0052, datasets C>A 2/8, Wilcoxon p=0.383
+epoch 25 mean diff +0.0002, datasets C>A 4/8, Wilcoxon p=0.945
+
+== H3: calibration of will_finish_top10 (raw) ==
+ECE 0.725; Brier 0.615 vs base-rate Brier 0.094; mean predicted 0.831 vs base 0.105
+  bin>=0.6 n=   30 mean_pred=0.686 observed=0.000
+  bin>=0.7 n= 1419 mean_pred=0.770 observed=0.021
+  bin>=0.8 n= 4201 mean_pred=0.846 observed=0.112
+  bin>=0.9 n=  350 mean_pred=0.910 observed=0.374
+Spearman(promise_conf, -|error|) = -0.087 | Spearman(action_conf, -|error|) = -0.29
+
+== State sensitivity: does each answer track its matching code feature? (Spearman, pooled) ==
+  above_most_peers         vs pct            rho = +0.502
+  plateaued                vs slope3         rho = -0.257
+  improving_fast           vs slope3         rho = +0.516
+  unstable                 vs noise          rho = -0.245
+  will_beat_best_so_far    vs gap_best_done  rho = +0.451
+  will_finish_top10        vs pct            rho = +0.462
+  promise                  vs pct            rho = +0.608
+  p_stop                   vs pct            rho = -0.679
+
+== Latency of the 8-question call (s) == {'mean': 0.309, '50%': 0.251, 'max': 1.603} p95 0.876

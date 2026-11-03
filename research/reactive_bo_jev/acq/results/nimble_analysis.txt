@@ -1,0 +1,32 @@
+nimble-sample: 4000 calls, fallbacks 0, AF shares {'LogEI': np.float64(0.258), 'LogPI': np.float64(0.214), 'UCB': np.float64(0.173), 'TS': np.float64(0.074), 'PosMean': np.float64(0.155), 'PosSTD': np.float64(0.125)}
+switch rate between consecutive steps 86.7%
+  steps  0-17: {'LogEI': '26%', 'LogPI': '20%', 'UCB': '17%', 'TS': '7%', 'PosMean': '15%', 'PosSTD': '13%'}
+  steps 17-34: {'LogEI': '26%', 'LogPI': '22%', 'UCB': '17%', 'TS': '8%', 'PosMean': '15%', 'PosSTD': '12%'}
+  steps 34-50: {'LogEI': '25%', 'LogPI': '22%', 'UCB': '18%', 'TS': '7%', 'PosMean': '16%', 'PosSTD': '12%'}
+
+mean AUC by dataset (seeds 0-9)
+dataset                      LogEI       LogPI          TS      random        rule  learned_L2  llm_gptoss tev1_sample nimble_samp
+numerai28.6                  0.296       0.319       0.226       0.278       0.258       0.232       0.276       0.211       0.242
+KDDCup09_appetency           0.082       0.065       0.085       0.073       0.081       0.087       0.069       0.072       0.081
+albert                       0.059       0.057       0.065       0.067       0.061       0.080       0.079       0.070       0.071
+helena                       0.054       0.055       0.066       0.050       0.046       0.048       0.033       0.043       0.046
+vehicle                      0.022       0.023       0.012       0.018       0.027       0.028       0.017       0.020       0.026
+sylvine                      0.047       0.031       0.060       0.047       0.040       0.039       0.055       0.057       0.045
+kc1                          0.464       0.451       0.387       0.467       0.444       0.402       0.446       0.389       0.427
+christine                    0.176       0.143       0.187       0.161       0.162       0.170       0.192       0.175       0.159
+MEAN                        0.1500      0.1431      0.1358      0.1451      0.1397      0.1358      0.1457      0.1297      0.1372
+
+nimble-sample vs each (negative = nimble better): change in mean AUC | mean of per-dataset ratios | better on k/8 | Wilcoxon p | 95% CI
+  vs static_TS            +1.0% |  +10.1% | 4/8 | p=1.000 | [-20.3%, +24.9%]
+  vs static_LogEI         -8.6% |   -1.9% | 6/8 | p=0.195 | [-27.5%, +4.3%]
+  vs static_LogPI         -4.1% |   +9.3% | 3/8 | p=0.945 | [-26.5%, +11.5%]
+  vs rule                 -1.8% |   +2.1% | 4/8 | p=0.742 | [-20.5%, +13.8%]
+  vs random               -5.5% |   +3.3% | 5/8 | p=0.742 | [-22.2%, +6.4%]
+  vs learned_L2           +1.0% |   -1.1% | 5/8 | p=0.945 | [-13.4%, +17.1%]
+  vs llm_gptoss           -5.8% |   +6.3% | 5/8 | p=0.383 | [-20.8%, +7.2%]
+  vs typed_tev1_sample    +5.8% |   +5.9% | 2/8 | p=0.383 | [-10.0%, +25.5%]
+
+== calibration: does P(a) predict that a's proposal beats the incumbent? ==
+base rate 0.059; AUROC of p_a 0.543; per-AF AUROC {'LogEI': 0.512, 'LogPI': 0.55, 'UCB': 0.508, 'TS': 0.502, 'PosMean': 0.524, 'PosSTD': 0.555}
+mean p vs observed rate per AF: {'LogEI': (np.float64(0.272), np.float64(0.071)), 'LogPI': (np.float64(0.215), np.float64(0.077)), 'UCB': (np.float64(0.167), np.float64(0.059)), 'TS': (np.float64(0.082), np.float64(0.049)), 'PosMean': (np.float64(0.15), np.float64(0.065)), 'PosSTD': (np.float64(0.113), np.float64(0.03))}
+confidence vs chosen-AF improved: spearman -0.037 (n=4000)

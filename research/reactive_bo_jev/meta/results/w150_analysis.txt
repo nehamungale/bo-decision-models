@@ -1,0 +1,33 @@
+150 landscapes with W1 (skipped for lack of training tasks: 0)
+
+=== noise 0% ===  always-W1 0.0329 | random 0.0535 | hindsight best-of 0.0247 | fall-back headroom 25.0% of W1's AUC
+W1 worse than random on 33/150 (22.0%); excess regret on those 25.0% of total W1 AUC; mean-of-ratios gain +nan; Wilcoxon p=5.17e-09
+   lcbench                  n= 30 W1 0.0601 random 0.1216 worse on 4 hindsight 0.0495
+   tabrepo_CatBoost         n= 20 W1 0.0536 random 0.0626 worse on 7 hindsight 0.0372
+   tabrepo_ExtraTrees       n= 20 W1 0.0113 random 0.0109 worse on 4 hindsight 0.0081
+   tabrepo_LightGBM         n= 20 W1 0.0263 random 0.0291 worse on 7 hindsight 0.0213
+   tabrepo_NeuralNetTorch   n= 20 W1 0.0316 random 0.0772 worse on 2 hindsight 0.0267
+   tabrepo_RandomForest     n= 20 W1 0.0059 random 0.0086 worse on 3 hindsight 0.0027
+   tabrepo_XGBoost          n= 20 W1 0.0281 random 0.0304 worse on 6 hindsight 0.0150
+failures: ['lcbench/APSFailure', 'lcbench/KDDCup09_appetency', 'lcbench/credit-g', 'lcbench/jasmine', 'tabrepo_CatBoost/Buzzinsocialmedia_Twitter', 'tabrepo_CatBoost/MagicTelescope', 'tabrepo_CatBoost/autoUniv-au7-700', 'tabrepo_CatBoost/kc1', 'tabrepo_CatBoost/page-blocks', 'tabrepo_CatBoost/quake', 'tabrepo_CatBoost/us_crime', 'tabrepo_ExtraTrees/Buzzinsocialmedia_Twitter', 'tabrepo_ExtraTrees/OVA_Lung', 'tabrepo_ExtraTrees/christine', 'tabrepo_ExtraTrees/yprop_4_1', 'tabrepo_LightGBM/Buzzinsocialmedia_Twitter', 'tabrepo_LightGBM/CIFAR_10', 'tabrepo_LightGBM/blood-transfusion-service-center', 'tabrepo_LightGBM/colleges', 'tabrepo_LightGBM/kc1', 'tabrepo_LightGBM/pc1', 'tabrepo_LightGBM/volcanoes-e1', 'tabrepo_NeuralNetTorch/pbcseq', 'tabrepo_NeuralNetTorch/philippine', 'tabrepo_RandomForest/Buzzinsocialmedia_Twitter', 'tabrepo_RandomForest/GAMETES_Epistasis_3-Way_20atts_0_2H_EDM-1_1', 'tabrepo_RandomForest/blood-transfusion-service-center', 'tabrepo_XGBoost/artificial-characters', 'tabrepo_XGBoost/fri_c2_1000_25', 'tabrepo_XGBoost/jungle_chess_2pcs_raw_endgame_complete', 'tabrepo_XGBoost/kdd_internet_usage', 'tabrepo_XGBoost/ozone-level-8hr', 'tabrepo_XGBoost/qsar-biodeg']
+single-feature AUROC for predicting 'W1 worse than random' (0.5 = no signal; sign-free = max(a, 1-a)):
+   spearman_src     AUROC 0.41  (n=150, failures 33)
+   r2_src           AUROC 0.41  (n=150, failures 33)
+   obs_cv           AUROC 0.29  (n=150, failures 33)
+   obs_skew         AUROC 0.50  (n=150, failures 33)
+   obs_max_z        AUROC 0.54  (n=150, failures 33)
+   best_is_src_top  AUROC 0.52  (n=150, failures 33)
+   loo_rmse         AUROC 0.52  (n=150, failures 33)
+   ls_mean          AUROC 0.45  (n=150, failures 33)
+   ls_min           AUROC 0.47  (n=150, failures 33)
+   gp_noise         AUROC 0.56  (n=150, failures 33)
+
+=== noise 5% ===  always-W1 0.0505 | random 0.0657 | hindsight best-of 0.0400 | fall-back headroom 20.7% of W1's AUC
+W1 worse than random on 45/150 (30.0%); excess regret on those 20.7% of total W1 AUC; mean-of-ratios gain +nan; Wilcoxon p=3.59e-06
+   lcbench                  n= 30 W1 0.0813 random 0.1350 worse on 5 hindsight 0.0727
+   tabrepo_CatBoost         n= 20 W1 0.0732 random 0.0750 worse on 7 hindsight 0.0592
+   tabrepo_ExtraTrees       n= 20 W1 0.0211 random 0.0200 worse on 8 hindsight 0.0158
+   tabrepo_LightGBM         n= 20 W1 0.0619 random 0.0435 worse on 10 hindsight 0.0363
+   tabrepo_NeuralNetTorch   n= 20 W1 0.0447 random 0.0853 worse on 2 hindsight 0.0415
+   tabrepo_RandomForest     n= 20 W1 0.0176 random 0.0223 worse on 6 hindsight 0.0128
+   tabrepo_XGBoost          n= 20 W1 0.0382 random 0.0437 worse on 7 hindsight 0.0256
